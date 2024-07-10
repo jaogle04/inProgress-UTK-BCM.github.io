@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Connnected</title>
+    <link href="./animate.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <!-- Robotto font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Oswald font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .header {
+        background-image: url(./Images/life_img.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: fixed;
+        background-size: cover;
+        color: white;
+        font-family: sans-serif;
+      }
+      .page-links {
+        font-family: sans-serif;
+        margin-bottom: 30px;
+      }
+      .section {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+      }
+      .content {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        gap: 30px;
+        font-family: sans-serif;
+      }
+      .content-words {
+        width: 1000px;
+      }
+      .sec-title {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      .extra-info {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      .paragraph {
+        font-size: 0.9rem;
+      }
+      .image {
+        border-radius: 5%;
+        box-shadow: 0rem 0.3rem 0.5rem black;
+        z-index: 1;
+      }
+      #TNT-image {
+        box-shadow: 0rem 0.3rem 0.5rem black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div>
+        <div class="header">
+          <div class="header-text">
+            <h1 class="title">GET CONNECTED</h1>
+          </div>
+        </div>
+      </div>
+      <!-- Webpage Links -->
+      <div class="page-links">
+        <div class="button">
+          <span>About <i class="arrow-down"></i></span>
+          <div class="dropdown-content">
+            <a href="core_beliefs.html" class="link--text"
+              ><p>Core Beliefs</p></a
+            >
+            <a href="missions_serving.html" class="link--text"
+              ><p>Missions & Serving</p></a
+            >
+            <a href="events.html" class="link--text"><p>Events</p></a>
+            <a href="staff.html" class="link--text"><p>Staff</p></a>
+          </div>
+        </div>
+        <div class="link--text">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="link--text">
+          <a href="month_at_glance.html">Month at Glance</a>
+        </div>
+        <div class="link--text">
+          <a href="get_connected.html">Get Connected</a>
+        </div>
+        <div class="link--text">
+          <a href="student_media.html">Student Media</a>
+        </div>
+        <div class="link--text">
+          <a href="alumni_friends.html">Alumni & Friends</a>
+        </div>
+        <div class="link--text">
+          <a href="give.html">Give</a>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Life Group Section -->
+        <div class="section">
+          <div class="content">
+            <img
+              class="image slideInLeft slideNormal easeOut"
+              src="./Images/lifegroup_image.jpeg"
+              width="500px"
+              alt="Girls' Lifegroup Picture"
+            />
+            <div class="content-words">
+              <h3 class="sec-title">LIFEGROUP</h3>
+              <p class="paragraph">
+                The BCM's Lifegroups are student-led weekly Bible studies that
+                meet throughout the week. In these small group studies, we seek
+                to build up one another and equip our students to be disciples
+                who make disciples. Whether studying the Bible or grabbing lunch
+                during the week, Lifegroups are a great place to build
+                relationships and grow closer with peers.
+              </p>
+              <h4 class="">GET PLUGGED-IN (Drop down or link)</h4>
+            </div>
+          </div>
+        </div>
+        <!-- TNT Section -->
+        <div class="section">
+          <div class="content">
+            <div class="content-words">
+              <h3 class="sec-title">TNT (THURSDAY NIGHT TOGETHER)</h3>
+              <h4 class="extra-info">THURSDAYS 7:00-8:30</h4>
+              <p class="paragraph">
+                TNT, or Thursday Nights Together, is a weekly night of
+                fellowship for students to grow closer to the LORD as they grow
+                closer with one another. TNT provides the unique opportunity to
+                worship through song, prayer, group discussion, and the sharing
+                of God's Word in the company of other college students as we go
+                through this often hectic stage of life together.
+              </p>
+            </div>
+            <img
+              id="TNT-image"
+              class="image slideInRight slideNormal easeOut"
+              src="./Images/TNT-image.JPEG"
+              width="500px"
+              alt="Speaker giving a sermon at TNT"
+            />
+          </div>
+        </div>
+        <!-- Soul Food Section -->
+        <div class="section">
+          <div class="content">
+            <img
+              class="image slideInLeft slideNormal easeOut"
+              src="./Images/soul_food_image.jpeg"
+              width="500px"
+              alt="group of students eating in dining area at the BCM during Soul Food"
+            />
+            <div class="content-words">
+              <h3 class="sec-title">SOUL FOOD</h3>
+              <h4 class="extra-info">MONDAYS 11:30-1:00</h4>
+              <p class="paragraph">
+                We are honored to have churches in the community serve students
+                by providing a free lunch on Mondays. Soul Food is a time of
+                fellowship and community meant to provide a place of rest as the
+                busy week begins. It is also a great time to connect with the
+                local churches who volunteer their time and resources to
+                minister to us.
+              </p>
+            </div>
+          </div>
+        </div>
+        `
+      </div>
+      <!-- Footer -->
+      <div></div>
+    </div>
+  </body>
+</html>

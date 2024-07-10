@@ -1,0 +1,76 @@
+/* Utility CLasses */
+.slideSlow {
+  animation-duration: 2s;
+}
+
+.slideNormal {
+  animation-duration: 1.5s;
+}
+
+.slideFast {
+  animation-duration: 0.8s;
+}
+
+.delay {
+  animation-delay: 0.2s;
+}
+
+.easeOut {
+  animation-timing-function: ease-out;
+}
+
+/* Webpage Dropdown */
+.button:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  transition-duration: 0.3s;
+}
+
+.button:hover .arrow-down {
+  rotate: 180deg;
+}
+
+.arrow-down {
+  transition-duration: 0.3s;
+}
+
+/* Slide in */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-650px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(650px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+/* Links */
+.link--text:hover {
+  opacity: 0.7;
+  color: dimgrey;
+}
+
+.link--text {
+  transition-duration: 0.2s;
+}

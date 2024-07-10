@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTK BCM</title>
+    <link href="./animate.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <!-- Robotto font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Oswald font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .header {
+        position: relative;
+        overflow: hidden;
+      }
+      .background-video {
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        min-width: 100%;
+        z-index: -1;
+      }
+      .header-text {
+        position: relative;
+        color: white;
+        font-family: sans-serif;
+        /* opacity: 0.75; */
+      }
+      .main-content {
+        flex-direction: column;
+        display: flex;
+        font-family: sans-serif;
+        margin-bottom: 50px;
+      }
+      .section {
+        align-items: center;
+        justify-content: center;
+      }
+      #calendar {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(7, 150px);
+        grid-template-rows: repeat(5, 150px);
+        overflow: hidden;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      h4 {
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+      .cal-day {
+        display: flex;
+        justify-content: center;
+      }
+      .location {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .sec-content > img {
+        height: 400px;
+        width: 600px;
+      }
+      .sec-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sec-content {
+        display: flex;
+        font-size: 25px;
+        justify-content: space-around;
+        gap: 10px;
+      }
+      .image {
+        border-radius: 5%;
+        box-shadow: 0 0.4rem 0.3rem 0.1rem black;
+      }
+      .paragraph {
+        max-width: 700px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <div id="BCM-logo"></div>
+    <!-- Header -->
+    <div class="header">
+      <!-- Background Video-->
+      <div class="background-video">
+        <video autoplay muted loop>
+          <source src="Images/Title_Background.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-- Text of Header -->
+      <div class="header-text">
+        <h1 class="title">BAPTIST COLLEGIATE MINISTRY</h1>
+        <h2 class="subtitle">UNIVERSITY OF TENNESSEE</h2>
+      </div>
+    </div>
+    <!-- Webpage Links -->
+    <div class="page-links">
+      <div class="button">
+        <span>About <i class="arrow-down"></i></span>
+        <div class="dropdown-content">
+          <a href="core_beliefs.html" class="link--text"><p>Core Beliefs</p></a>
+          <a href="missions_serving.html" class="link--text"
+            ><p>Missions & Serving</p></a
+          >
+          <a href="events.html" class="link--text"><p>Events</p></a>
+          <a href="staff.html" class="link--text"><p>Staff</p></a>
+        </div>
+      </div>
+      <div class="link--text">
+        <a href="month_at_glance.html">Month at Glance</a>
+      </div>
+      <div class="link--text">
+        <a href="get_connected.html">Get Connected</a>
+      </div>
+      <div class="link--text">
+        <a href="student_media.html">Student Media</a>
+      </div>
+      <div class="link--text">
+        <a href="alumni_friends.html">Alumni & Friends</a>
+      </div>
+      <div class="link--text">
+        <a href="give.html">Give</a>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="section">
+        <div class="sec-title">
+          <h3>Month at a Glance</h3>
+        </div>
+        <div class="sec-title">
+          <h4>August 2024</h4>
+        </div>
+        <div id="calendar">
+          <div class="cal-day">1</div>
+          <div class="cal-day">2</div>
+          <div class="cal-day">3</div>
+          <div class="cal-day">4</div>
+          <div class="cal-day">5</div>
+          <div class="cal-day">6</div>
+          <div class="cal-day">7</div>
+          <div class="cal-day">8</div>
+          <div class="cal-day">9</div>
+          <div class="cal-day">10</div>
+          <div class="cal-day">11</div>
+          <div class="cal-day">12</div>
+          <div class="cal-day">13</div>
+          <div class="cal-day">14</div>
+          <div class="cal-day">15</div>
+          <div class="cal-day">16</div>
+          <div class="cal-day">17</div>
+          <div class="cal-day">18</div>
+          <div class="cal-day">19</div>
+          <div class="cal-day">20</div>
+          <div class="cal-day">21</div>
+          <div class="cal-day">22</div>
+          <div class="cal-day">23</div>
+          <div class="cal-day">24</div>
+          <div class="cal-day">25</div>
+          <div class="cal-day">26</div>
+          <div class="cal-day">27</div>
+          <div class="cal-day">28</div>
+          <div class="cal-day">29</div>
+          <div class="cal-day">30</div>
+          <div class="cal-day">31</div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sec-title">
+          <h3>About the B</h3>
+        </div>
+        <div class="sec-content">
+          <img
+            class="image slideInLeft slideFast easeOut"
+            src="Images/Great Exchange.jpg"
+            alt=""
+            kuh
+          />
+          <p class="paragraph slideInRight slideFast easeOut">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sec-title">
+          <h3>Get Connected</h3>
+        </div>
+        <div class="sec-content">
+          <img class="slideInLeft slideNormal easeOut" />
+          <p class="paragraph slideInRight slideNormal easeOut delay"></p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sec-title">
+          <h3>Missions</h3>
+        </div>
+        <div class="sec-content">
+          <img class="slideInLeft slideNormal easeOut" />
+          <p class="paragraph slideInRight slideNormal easeOut">
+            At the BCM, we want to provide students with many opportunities to
+            practically live out Matthew 28. We strive to share the gospel on
+            UT's campus through The Great Exchange, by participating in Disaster
+            Relief projects in the Southeast region, and partnering with the
+            TBMB and IMB to send students on state and international mission
+            trips.
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sec-title">
+          <h3>Student Media</h3>
+        </div>
+        <div class="sec-content">
+          <img
+            src="Images/Soul Food (1) 2024.jpg"
+            class="image slideInLeft slideNormal easeOut"
+            alt=""
+          />
+          <img
+            src="Images/TNT Worship.jpg"
+            class="image slideInRight slideNormal easeOut"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Map Section -->
+    <div class="section location">
+      <div class="sec-title">
+        <h3>Location</h3>
+      </div>
+      <div id="location">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6459.427854503983!2d-83.9354058879843!3d35.953967472385635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c3d5f681e7801%3A0x634029a3a33e3a55!2sBaptist%20Collegiate%20Ministry!5e0!3m2!1sen!2sus!4v1720637639476!5m2!1sen!2sus"
+          width="900"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <br />
+    <!-- Footer, might not need to be in a different div -->
+    <!-- footer having some issues, going to style it on another page and maybe save it for last out of high priority things to do -->
+    <div id="footer">
+      <div class=""></div>
+      <div class="">
+        <div class="">
+          <p class="">
+            1811 Melrose Avenue Knoxville, TN 379161811 Melrose Avenue
+            Knoxville, TN 37916
+          </p>
+          <p class="">865-546-8272 (office) • 865-546-8273 (fax)</p>
+          <p class="">baptist@utk.edu (email)</p>
+        </div>
+        <div class="">
+          <p>
+            Tennessee Baptist Churches giving through the Cooperative Program,
+            the Golden Offering for Tennessee Missions, and through the
+            Chilhowee, Clinton, and Knox Baptist Association make this BCM
+            ministry possible.
+          </p>
+        </div>
+      </div>
+      <div class="">
+        <div>
+          <a href="https://www.tnbaptist.org/">
+            <img
+              id="tbmb-logo"
+              style="float: right"
+              src="./Images/TBMB.jpg"
+              width="350px"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
