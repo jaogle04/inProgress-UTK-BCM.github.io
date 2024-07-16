@@ -37,33 +37,89 @@
         font-family: sans-serif;
         /* opacity: 0.75; */
       }
+      .subtitle {
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        text-align: left;
+      }
+      .title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 12rem;
+      }
       .main-content {
         flex-direction: column;
         display: flex;
         font-family: sans-serif;
         margin-bottom: 50px;
+        position: relative;
       }
+      /* Calendar Style */
       .section {
         align-items: center;
         justify-content: center;
       }
-      #calendar {
-        width: auto;
-        display: grid;
-        grid-template-columns: repeat(7, 150px);
-        grid-template-rows: repeat(5, 150px);
-        overflow: hidden;
-        justify-content: center;
-        /* align-items: center; */
+      .container {
+        align-items: center;
+        text-align: center;
+      }
+      h3 {
+        margin: 0;
       }
       h4 {
-        margin-top: 0px;
-        margin-bottom: 20px;
+        margin: 0;
       }
-      .cal-day {
-        display: flex;
+      .calendar {
+        width: auto;
+        height: auto;
+        background-color: darkgreen;
+        border-radius: 5% 5% 0% 0%;
+        padding: 20px 10px 20px 10px;
+      }
+      #daysOfWeek {
+        display: grid;
+        grid-template-columns: repeat(7, 100px);
+        grid-template-rows: auto;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        align-items: center;
         justify-content: center;
       }
+      .cal-day {
+        text-align: left;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        font-size: 20px;
+      }
+      #days {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(7, 100px);
+        grid-template-rows: repeat(5, 100px);
+        overflow: hidden;
+        justify-content: center;
+        gap: 2px;
+        border: solid black 3px;
+      }
+      .day-info {
+        color: white;
+        width: 300px;
+        height: auto;
+        font-size: 15px;
+        overflow: hidden;
+      }
+      .greenCircle {
+        background-color: #ff8200;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+      }
+      /*  */
       .location {
         display: flex;
         flex-direction: column;
@@ -78,10 +134,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 15px;
       }
       .sec-content {
         display: flex;
-        font-size: 25px;
+        font-size: 20px;
         justify-content: space-around;
         gap: 10px;
       }
@@ -108,8 +165,9 @@
       </div>
       <!-- Text of Header -->
       <div class="header-text">
-        <h1 class="title">BAPTIST COLLEGIATE MINISTRY</h1>
-        <h2 class="subtitle">UNIVERSITY OF TENNESSEE</h2>
+        <h1 class="subtitle">We are the</h1>
+        <h2 class="subtitle">University of Tennessee, Knoxville</h2>
+        <h1 class="title">BCM</h1>
       </div>
     </div>
     <!-- Webpage Links -->
@@ -126,9 +184,6 @@
         </div>
       </div>
       <div class="link--text">
-        <a href="month_at_glance.html">Month at Glance</a>
-      </div>
-      <div class="link--text">
         <a href="get_connected.html">Get Connected</a>
       </div>
       <div class="link--text">
@@ -143,71 +198,319 @@
     </div>
     <!-- Main Content -->
     <div class="main-content">
+      <!-- Calendar -->
       <div class="section">
-        <div class="sec-title">
-          <h3>Month at a Glance</h3>
-        </div>
-        <div class="sec-title">
-          <h4>August 2024</h4>
-        </div>
-        <div id="calendar">
-          <div class="cal-day">1</div>
-          <div class="cal-day">2</div>
-          <div class="cal-day">3</div>
-          <div class="cal-day">4</div>
-          <div class="cal-day">5</div>
-          <div class="cal-day">6</div>
-          <div class="cal-day">7</div>
-          <div class="cal-day">8</div>
-          <div class="cal-day">9</div>
-          <div class="cal-day">10</div>
-          <div class="cal-day">11</div>
-          <div class="cal-day">12</div>
-          <div class="cal-day">13</div>
-          <div class="cal-day">14</div>
-          <div class="cal-day">15</div>
-          <div class="cal-day">16</div>
-          <div class="cal-day">17</div>
-          <div class="cal-day">18</div>
-          <div class="cal-day">19</div>
-          <div class="cal-day">20</div>
-          <div class="cal-day">21</div>
-          <div class="cal-day">22</div>
-          <div class="cal-day">23</div>
-          <div class="cal-day">24</div>
-          <div class="cal-day">25</div>
-          <div class="cal-day">26</div>
-          <div class="cal-day">27</div>
-          <div class="cal-day">28</div>
-          <div class="cal-day">29</div>
-          <div class="cal-day">30</div>
-          <div class="cal-day">31</div>
+        <div class="container">
+          <div class="section">
+            <div class="sec-title">
+              <h3>Month at a Glance</h3>
+            </div>
+            <div class="calendar">
+              <div id="month">
+                <h4>August 2024</h4>
+              </div>
+              <div id="daysOfWeek">
+                <div>
+                  <h5>Sunday</h5>
+                </div>
+                <div>
+                  <h5>Monday</h5>
+                </div>
+                <div>
+                  <h5>Tuesday</h5>
+                </div>
+                <div>
+                  <h5>Wednesday</h5>
+                </div>
+                <div>
+                  <h5>Thursday</h5>
+                </div>
+                <div>
+                  <h5>Friday</h5>
+                </div>
+                <div>
+                  <h5>Saturday</h5>
+                </div>
+              </div>
+              <div id="days">
+                <div class="cal-day button">
+                  <div>1</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleCenter slideFast">
+                    <p>Event Summary:</p>
+                    <p>
+                      is simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley of type and scrambled it to make a type
+                      specimen book. It has survived not only five centuries,
+                      but also the leap into electronic typesetting, remaining
+                      essentially unchanged. It was popularised in the 1960s
+                      with the release of Letraset sheets containing Lorem Ipsum
+                      passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>2</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>3</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>4</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>5</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day button">
+                  <div>6</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleCenter slideFast">
+                    <p>Date</p>
+                    <p>
+                      is simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the industry's standard
+                      dummy text ever since the 1500s, when an unknown printer
+                      took a galley of type and scrambled it to make a type
+                      specimen book. It has survived not only five centuries,
+                      but also the leap into electronic typesetting, remaining
+                      essentially unchanged. It was popularised in the 1960s
+                      with the release of Letraset sheets containing Lorem Ipsum
+                      passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>7</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>8</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>9</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>10</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>11</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>12</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>13</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>14</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>15</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>16</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>17</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>18</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>19</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>20</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>21</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>22</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>23</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>24</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>25</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>26</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>27</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>28</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>29</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>30</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>31</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info scaleTop">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="section">
-        <div class="sec-title">
-          <h3>About the B</h3>
-        </div>
-        <div class="sec-content">
-          <img
-            class="image slideInLeft slideFast easeOut"
-            src="Images/Great Exchange.jpg"
-            alt=""
-            kuh
-          />
-          <p class="paragraph slideInRight slideFast easeOut">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </div>
+      <!-- Get Connected -->
       <div class="section">
         <div class="sec-title">
           <h3>Get Connected</h3>
@@ -217,6 +520,7 @@
           <p class="paragraph slideInRight slideNormal easeOut delay"></p>
         </div>
       </div>
+      <!-- Missions -->
       <div class="section">
         <div class="sec-title">
           <h3>Missions</h3>
@@ -233,6 +537,7 @@
           </p>
         </div>
       </div>
+      <!-- Student Media -->
       <div class="section">
         <div class="sec-title">
           <h3>Student Media</h3>
@@ -304,5 +609,27 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var dayInfoElements = document.getElementsByClassName("day-info");
+        var greenCircleElements =
+          document.getElementsByClassName("greenCircle");
+
+        // Ensure both collections have the same length
+        if (dayInfoElements.length === greenCircleElements.length) {
+          for (var i = 0; i < dayInfoElements.length; i++) {
+            if (dayInfoElements[i].textContent.trim().length > 0) {
+              greenCircleElements[i].style.display = "block"; // Show the element with class "greenCircle"
+            } else {
+              greenCircleElements[i].style.display = "none"; // Hide the element with class "greenCircle"
+            }
+          }
+        } else {
+          console.error(
+            "The number of day-info elements does not match the number of greenCircle elements."
+          );
+        }
+      });
+    </script>
   </body>
 </html>
