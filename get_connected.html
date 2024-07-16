@@ -20,6 +20,10 @@
       rel="stylesheet"
     />
     <style>
+      .container {
+        width: 100%;
+        height: auto;
+      }
       .header {
         background-image: url(./Images/life_img.jpeg);
         background-position: center;
@@ -71,6 +75,21 @@
       #TNT-image {
         box-shadow: 0rem 0.3rem 0.5rem black;
       }
+      #google-form {
+        display: inline-block;
+        border-radius: 15% 15% 15% 15%;
+        text-align: center;
+        /* width: 250px; */
+        background-color: #314528;
+        padding: 10px;
+        font-size: 30px;
+        color: #d9d9d9;
+      }
+      #google-form:hover {
+        transition-duration: 500ms;
+        background-color: rgba(49, 69, 40, 0.66);
+        color: #314528;
+      }
     </style>
   </head>
   <body>
@@ -100,9 +119,6 @@
         </div>
         <div class="link--text">
           <a href="index.html">Home</a>
-        </div>
-        <div class="link--text">
-          <a href="month_at_glance.html">Month at Glance</a>
         </div>
         <div class="link--text">
           <a href="get_connected.html">Get Connected</a>
@@ -138,7 +154,9 @@
                 during the week, Lifegroups are a great place to build
                 relationships and grow closer with peers.
               </p>
-              <h4 class="">GET PLUGGED-IN (Drop down or link)</h4>
+              <a src=""
+                ><h5 class="button" id="google-form">Get Plugged-In</h5></a
+              >
             </div>
           </div>
         </div>
@@ -194,5 +212,20 @@
       <!-- Footer -->
       <div></div>
     </div>
+    <script>
+      //Page Links
+      const pageLinks = document.querySelector(".page-links");
+      const scrollWatcher = document.createElement("div");
+
+      scrollWatcher.setAttribute("data-scroll-watcher", "");
+      pageLinks.before(scrollWatcher);
+
+      const navObserver = new IntersectionObserver((entries) => {
+        console.log(entries);
+        pageLinks.classList.toggle("sticking", !entries[0].isIntersecting);
+      });
+
+      navObserver.observe(scrollWatcher);
+    </script>
   </body>
 </html>

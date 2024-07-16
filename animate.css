@@ -25,7 +25,7 @@
 }
 
 .dropdown-content {
-  transition-duration: 0.3s;
+  transition-duration: 2s;
 }
 
 .button:hover .arrow-down {
@@ -36,7 +36,7 @@
   transition-duration: 0.3s;
 }
 
-/* Slide in */
+/* Keyframes */
 @keyframes slideInLeft {
   from {
     transform: translateX(-650px);
@@ -63,6 +63,46 @@
 
 .slideInRight {
   animation-name: slideInRight;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.slideDown {
+  animation-name: slideDown;
+  animation-duration: 3s;
+}
+
+@keyframes scaleCenter {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.scaleCenter {
+  animation-name: scaleCenter;
+}
+
+@keyframes scaleTop {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: auto;
+  }
+}
+
+.scaleTop {
+  animation-name: scaleTop;
 }
 
 /* Links */

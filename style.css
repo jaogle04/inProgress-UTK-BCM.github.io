@@ -42,6 +42,7 @@ a {
 }
 .page-links {
   position: sticky;
+  background-color: rgba(49, 69, 40, 0.66);
   top: 0px;
   display: flex;
   padding: 10px;
@@ -51,9 +52,13 @@ a {
   align-items: center;
   font-size: 1rem;
   font-family: sans-serif;
-  box-shadow: 0 0 0.5rem black;
+  box-shadow: 1px 1px 1px black;
   z-index: 98;
-  background-color: white;
+}
+.sticking {
+  background-color: lightgrey;
+  transition: background-color 200ms;
+  box-shadow: 1px 1px 20px black;
 }
 #footer {
   /* position: absolute;
@@ -63,6 +68,7 @@ a {
   grid-template-columns: 0.1fr 0.8fr 0.1fr;
   grid-template-rows: 1fr;
   font-size: 12px;
+  text-align: left;
 }
 .arrow-down {
   border: solid black;
@@ -87,7 +93,6 @@ a {
   font-family: sans-serif;
   background-color: #322f2f;
 }
-
 .dropdown-content > a {
   color: white;
 }
