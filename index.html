@@ -28,7 +28,55 @@
       rel="stylesheet"
     />
     <style>
+      #logo-section {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        width: auto;
+        height: 125px;
+        z-index: 100;
+        margin-top: 15px;
+        padding: 0;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 125px;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+      }
+      .hamburger-sec {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .white-circle {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: white;
+        margin-right: 5px;
+      }
+      .white-dash {
+        height: 20px;
+        width: 75px;
+        background-color: white;
+        border-radius: 10px;
+        margin: 0;
+      }
+      #BCM-logo {
+        height: 125px;
+      }
+
       .header {
+        display: flexbox;
+        flex-direction: column;
         position: relative;
         overflow: hidden;
         background-color: #314528;
@@ -137,7 +185,7 @@
         flex-direction: column;
       }
       /*  */
-      .location {
+      .map {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -168,11 +216,65 @@
         font-family: sans-serif;
         text-align: left;
       }
+      #get-connected {
+        justify-content: center;
+        gap: 5%;
+      }
+      .sec-img {
+        position: relative;
+        display: inline-block;
+      }
+      .sec-img > img {
+        border-radius: 2px;
+        height: 300px;
+        display: block;
+      }
+      .overlay-text {
+        display: none;
+        visibility: 1;
+        opacity: 1;
+        /* background-color: rgba(255, 255, 255); */
+      }
+      .sec-img:hover .overlay-text {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 50px;
+        font-weight: 900;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 100em white;
+        transition: scaleCenter 10s ease-in; /*created a keyframe named "fade-in", need to figure out how to apply it */
+      }
     </style>
   </head>
 
   <body class="container">
-    <div id="BCM-logo"></div>
+    <div id="logo-section">
+      <div class="hamburger">
+        <div class="hamburger-sec">
+          <div class="white-circle"></div>
+          <div class="white-dash"></div>
+        </div>
+        <div class="hamburger-sec">
+          <div class="white-circle"></div>
+          <div class="white-dash"></div>
+        </div>
+        <div class="hamburger-sec">
+          <div class="white-circle"></div>
+          <div class="white-dash"></div>
+        </div>
+      </div>
+      <div>
+        <img
+          id="BCM-logo"
+          src="./Images/BCM_logo_2_edited.png"
+          alt="University of Tennessee Baptist Collegiate Ministry logo"
+        />
+      </div>
+    </div>
     <!-- Header -->
     <div class="header">
       <!-- Text of Header -->
@@ -250,9 +352,9 @@
               </div>
               <div id="days">
                 <div class="cal-day button">
-                  <div>1</div>
+                  <div></div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleCenter slideFast">
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p>Event Summary:</p>
                     <p>
                       is simply dummy text of the printing and typesetting
@@ -270,41 +372,41 @@
                   </div>
                 </div>
                 <div class="cal-day">
-                  <div>2</div>
+                  <div></div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
-                  <div>3</div>
+                  <div></div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
-                  <div>4</div>
+                  <div></div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
-                  <div>5</div>
+                  <div>1</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
-                  <div>6</div>
+                  <div>2</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleCenter slideFast">
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p>Date</p>
                     <p>
                       is simply dummy text of the printing and typesetting
@@ -322,9 +424,41 @@
                   </div>
                 </div>
                 <div class="cal-day">
+                  <div>3</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info fadeIn">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>4</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info fadeIn">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>5</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info fadeIn">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div>6</div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info fadeIn">
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
                   <div>7</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -332,7 +466,7 @@
                 <div class="cal-day">
                   <div>8</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -340,7 +474,7 @@
                 <div class="cal-day">
                   <div>9</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -348,7 +482,7 @@
                 <div class="cal-day">
                   <div>10</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -356,7 +490,7 @@
                 <div class="cal-day">
                   <div>11</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -364,7 +498,7 @@
                 <div class="cal-day">
                   <div>12</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -372,7 +506,7 @@
                 <div class="cal-day">
                   <div>13</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -380,7 +514,7 @@
                 <div class="cal-day">
                   <div>14</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -388,7 +522,7 @@
                 <div class="cal-day">
                   <div>15</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -396,7 +530,7 @@
                 <div class="cal-day">
                   <div>16</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -404,7 +538,7 @@
                 <div class="cal-day">
                   <div>17</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -412,7 +546,7 @@
                 <div class="cal-day">
                   <div>18</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -420,7 +554,7 @@
                 <div class="cal-day">
                   <div>19</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -428,7 +562,7 @@
                 <div class="cal-day">
                   <div>20</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -436,7 +570,7 @@
                 <div class="cal-day">
                   <div>21</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -444,7 +578,7 @@
                 <div class="cal-day">
                   <div>22</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -452,7 +586,7 @@
                 <div class="cal-day">
                   <div>23</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -460,7 +594,7 @@
                 <div class="cal-day">
                   <div>24</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -468,7 +602,7 @@
                 <div class="cal-day">
                   <div>25</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -476,7 +610,7 @@
                 <div class="cal-day">
                   <div>26</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -484,7 +618,7 @@
                 <div class="cal-day">
                   <div>27</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -492,7 +626,7 @@
                 <div class="cal-day">
                   <div>28</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -500,7 +634,7 @@
                 <div class="cal-day">
                   <div>29</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -508,7 +642,7 @@
                 <div class="cal-day">
                   <div>30</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -516,7 +650,7 @@
                 <div class="cal-day">
                   <div>31</div>
                   <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info scaleTop">
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                     <p></p>
                   </div>
@@ -535,17 +669,37 @@
       <!-- Get Connected -->
       <div class="section">
         <div class="sec-title">
-          <h3>Get Connected</h3>
+          <h2>Get Connected</h2>
         </div>
-        <div class="sec-content">
-          <img class="slideInLeft slideNormal easeOut" />
-          <p class="paragraph slideInRight slideNormal easeOut delay"></p>
+        <div class="sec-content" id="get-connected">
+          <div class="sec-img" id="life-group">
+            <img src="./Images/lifegroup_image.jpeg" />
+            <div class="overlay-text fadeIn slideSlow">
+              <h4>Life Group</h4>
+            </div>
+          </div>
+          <div class="sec-img" id="tnt">
+            <img src="./Images/TNT-image.JPEG" />
+            <div class="overlay-text fadeIn slideSlow">
+              <h4>
+                Thursday<br />
+                Night<br />
+                Together
+              </h4>
+            </div>
+          </div>
+          <div class="sec-img" id="soul-food">
+            <img src="./Images/soul_food_edited (2).jpg" />
+            <div class="overlay-text fadeIn slideSlow">
+              <h4>Soul Food</h4>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Missions -->
       <div class="section">
         <div class="sec-title">
-          <h3>Missions</h3>
+          <h2>Missions</h2>
         </div>
         <div class="sec-content">
           <img class="slideInLeft slideNormal easeOut" />
@@ -562,7 +716,7 @@
       <!-- Student Media -->
       <div class="section">
         <div class="sec-title">
-          <h3>Student Media</h3>
+          <h2>Student Media</h2>
         </div>
         <div class="sec-content">
           <img
@@ -578,12 +732,12 @@
         </div>
       </div>
     </div>
-    <!-- Map Section -->
-    <div class="section location">
+    <!-- Location -->
+    <div class="section map">
       <div class="sec-title">
-        <h3>Location</h3>
+        <h2>Location</h2>
       </div>
-      <div id="location">
+      <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6459.427854503983!2d-83.9354058879843!3d35.953967472385635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c3d5f681e7801%3A0x634029a3a33e3a55!2sBaptist%20Collegiate%20Ministry!5e0!3m2!1sen!2sus!4v1720637639476!5m2!1sen!2sus"
           width="900"
@@ -592,6 +746,18 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <div class="section map" id="church-locations">
+      <div clas="sec-title">
+        <h2>Local Churches</h2>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1lIpdc8a7grtXkL_GmFhP2Xn2obbB5BM&ehbc=2E312F"
+          width="640"
+          height="480"
         ></iframe>
       </div>
     </div>
@@ -624,7 +790,7 @@
             <img
               id="tbmb-logo"
               style="float: right"
-              src="./Images/TBMB.jpg"
+              src="./Images/TBMB_edited.png"
               width="350px"
             />
           </a>

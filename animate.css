@@ -37,6 +37,19 @@
 }
 
 /* Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
 @keyframes slideInLeft {
   from {
     transform: translateX(-650px);
