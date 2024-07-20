@@ -77,18 +77,25 @@
       }
       #google-form {
         display: inline-block;
-        border-radius: 15% 15% 15% 15%;
+        border-radius: 10px;
         text-align: center;
         /* width: 250px; */
-        background-color: #314528;
+        background-color: #b86014;
         padding: 10px;
         font-size: 30px;
         color: #d9d9d9;
       }
       #google-form:hover {
         transition-duration: 500ms;
-        background-color: rgba(49, 69, 40, 0.66);
-        color: #314528;
+        background-color: rgba(184, 96, 20, 0.66);
+        color: black;
+      }
+      .map {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
       }
     </style>
   </head>
@@ -207,10 +214,53 @@
             </div>
           </div>
         </div>
-        `
+        <div class="map" id="church-locations">
+          <div clas="sec-title">
+            <h2>Local Churches</h2>
+          </div>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1lIpdc8a7grtXkL_GmFhP2Xn2obbB5BM&ehbc=2E312F"
+              width="900"
+              height="500"
+            ></iframe>
+          </div>
+        </div>
       </div>
       <!-- Footer -->
-      <div></div>
+      <div id="footer">
+        <div class=""></div>
+        <div class="">
+          <div class="">
+            <p class="">
+              1811 Melrose Avenue Knoxville, TN 379161811 Melrose Avenue
+              Knoxville, TN 37916
+            </p>
+            <p class="">865-546-8272 (office) • 865-546-8273 (fax)</p>
+            <p class="">baptist@utk.edu (email)</p>
+          </div>
+          <div class="">
+            <p>
+              Tennessee Baptist Churches giving through the Cooperative Program,
+              the Golden Offering for Tennessee Missions, and through the
+              Chilhowee, Clinton, and Knox Baptist Association make this BCM
+              ministry possible.
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div>
+            <a href="https://www.tnbaptist.org/">
+              <img
+                id="tbmb-logo"
+                style="float: right"
+                src="./Images/TBMB_edited.png"
+                width="350px"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       //Page Links

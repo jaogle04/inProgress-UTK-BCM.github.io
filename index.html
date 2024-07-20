@@ -71,7 +71,8 @@
         margin: 0;
       }
       #BCM-logo {
-        height: 125px;
+        margin-left: 15px;
+        height: 50px;
       }
 
       .header {
@@ -79,13 +80,17 @@
         flex-direction: column;
         position: relative;
         overflow: hidden;
-        background-color: #314528;
+        background-color: #b86014;
       }
       .header-text {
         position: relative;
         color: white;
         font-family: sans-serif;
         /* opacity: 0.75; */
+      }
+      #home-page-title-img {
+        height: 400px;
+        margin: 0;
       }
       .subtitle {
         margin: 0;
@@ -117,7 +122,9 @@
       .info-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
       }
       .cal-container {
         align-items: center;
@@ -134,7 +141,7 @@
       .calendar {
         width: auto;
         height: auto;
-        background-color: #314528;
+        background-color: #b86014;
         border-radius: 5% 5% 1% 1%;
         padding: 20px 10px 20px 10px;
       }
@@ -148,13 +155,14 @@
         align-items: center;
         justify-content: center;
         gap: 2px;
+        text-transform: uppercase;
       }
       .cal-day {
         text-align: left;
         display: block;
         justify-content: center;
         align-items: center;
-        background-color: green;
+        background-color: #f8e5c6;
         font-size: 20px;
       }
       #days {
@@ -175,7 +183,7 @@
         overflow: hidden;
       }
       .greenCircle {
-        background-color: #ff8200;
+        background-color: #b86014;
         border-radius: 50%;
         width: 30px;
         height: 30px;
@@ -183,6 +191,7 @@
       #house-hours {
         display: flexbox;
         flex-direction: column;
+        margin-left: 75px;
       }
       /*  */
       .map {
@@ -225,52 +234,38 @@
         display: inline-block;
       }
       .sec-img > img {
-        border-radius: 2px;
-        height: 300px;
+        border-radius: 5px;
+        height: 450px;
         display: block;
       }
       .overlay-text {
         display: none;
         visibility: 1;
         opacity: 1;
-        /* background-color: rgba(255, 255, 255); */
+        padding: 2px;
+        border-radius: 10px;
       }
       .sec-img:hover .overlay-text {
         display: flex;
         position: absolute;
-        top: 50%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        font-size: 50px;
+        font-size: 35px;
+        color: white;
         font-weight: 900;
-        background-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 0 100em white;
-        transition: scaleCenter 10s ease-in; /*created a keyframe named "fade-in", need to figure out how to apply it */
+        font-family: "Times New Roman", Times, serif;
+        background-color: rgba(255, 255, 255, 0.8);
       }
     </style>
   </head>
 
   <body class="container">
     <div id="logo-section">
-      <div class="hamburger">
-        <div class="hamburger-sec">
-          <div class="white-circle"></div>
-          <div class="white-dash"></div>
-        </div>
-        <div class="hamburger-sec">
-          <div class="white-circle"></div>
-          <div class="white-dash"></div>
-        </div>
-        <div class="hamburger-sec">
-          <div class="white-circle"></div>
-          <div class="white-dash"></div>
-        </div>
-      </div>
-      <div>
         <img
           id="BCM-logo"
-          src="./Images/BCM_logo_2_edited.png"
+          src="./Images/BCM_logo_1_edited.PNG"
           alt="University of Tennessee Baptist Collegiate Ministry logo"
         />
       </div>
@@ -280,7 +275,12 @@
       <!-- Text of Header -->
       <div class="header-text">
         <h1 class="subtitle">welcome to</h1>
-        <h1 class="title">The B.</h1>
+        <!-- <h1 class="title">The B.</h1> -->
+        <img
+          id="home-page-title-img"
+          src="./Images/Home_Page_Title_edited.png"
+          height="400px"
+        />
       </div>
     </div>
     <!-- Webpage Links -->
@@ -288,7 +288,6 @@
       <div class="button">
         <span>About <i class="arrow-down"></i></span>
         <div class="dropdown-content">
-          <a href="core_beliefs.html" class="link--text"><p>Core Beliefs</p></a>
           <a href="missions_serving.html" class="link--text"
             ><p>Missions & Serving</p></a
           >
@@ -307,11 +306,18 @@
           <a href="" class="link--text"><p>Youtube Channel</p></a>
         </div>
       </div>
-      <div class="link--text">
-        <a href="alumni_friends.html">Alumni & Friends</a>
+      <div class="button">
+        <span
+          ><a href="alumni_friends.html"
+            >Alumni & Friends <i class="arrow-down"></i
+          ></a>
+        </span>
+        <div class="dropdown-content">
+          <a href="" class="link--text"><p>Graduate Opportunities</p></a>
+        </div>
       </div>
       <div class="link--text">
-        <a href="give.html">Give</a>
+        <a href="give.html">Support</a>
       </div>
     </div>
     <!-- Main Content -->
@@ -319,7 +325,7 @@
       <!-- Calendar -->
       <div class="section">
         <div class="sec-title">
-          <h3>Month at a Glance</h3>
+          <h2>Month at a Glance</h2>
         </div>
         <div class="info-container">
           <div class="cal-container">
@@ -329,25 +335,25 @@
               </div>
               <div id="daysOfWeek">
                 <div>
-                  <h5>Sun.</h5>
+                  <h5>Sun</h5>
                 </div>
                 <div>
-                  <h5>Mon.</h5>
+                  <h5>Mon</h5>
                 </div>
                 <div>
-                  <h5>Tues.</h5>
+                  <h5>Tues</h5>
                 </div>
                 <div>
-                  <h5>Wed.</h5>
+                  <h5>Wed</h5>
                 </div>
                 <div>
-                  <h5>Thurs.</h5>
+                  <h5>Thur</h5>
                 </div>
                 <div>
-                  <h5>Fri.</h5>
+                  <h5>Fri</h5>
                 </div>
                 <div>
-                  <h5>Sat.</h5>
+                  <h5>Sat</h5>
                 </div>
               </div>
               <div id="days">
@@ -355,27 +361,6 @@
                   <div></div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn slideNormal">
-                    <p>Event Summary:</p>
-                    <p>
-                      is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s, when an unknown printer
-                      took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries,
-                      but also the leap into electronic typesetting, remaining
-                      essentially unchanged. It was popularised in the 1960s
-                      with the release of Letraset sheets containing Lorem Ipsum
-                      passages, and more recently with desktop publishing
-                      software like Aldus PageMaker including versions of Lorem
-                      Ipsum.
-                    </p>
-                  </div>
-                </div>
-                <div class="cal-day">
-                  <div></div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -384,7 +369,6 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
@@ -392,6 +376,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
+                  </div>
+                </div>
+                <div class="cal-day">
+                  <div></div>
+                  <div class="greenCircle"></div>
+                  <div class="dropdown-content day-info fadeIn">
                     <p></p>
                   </div>
                 </div>
@@ -400,14 +390,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>2</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn slideNormal">
-                    <p>Date</p>
                     <p>
                       is simply dummy text of the printing and typesetting
                       industry. Lorem Ipsum has been the industry's standard
@@ -428,14 +416,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>4</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -444,14 +430,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>6</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -460,14 +444,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>8</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -476,14 +458,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>10</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -492,14 +472,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>12</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -508,14 +486,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>14</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -524,14 +500,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>16</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -540,14 +514,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>18</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -556,14 +528,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>20</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -572,14 +542,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>22</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -588,14 +556,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>24</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -604,14 +570,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>26</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -620,14 +584,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>28</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -636,14 +598,12 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
                 <div class="cal-day">
                   <div>30</div>
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
-                    <p></p>
                     <p></p>
                   </div>
                 </div>
@@ -652,14 +612,13 @@
                   <div class="greenCircle"></div>
                   <div class="dropdown-content day-info fadeIn">
                     <p></p>
-                    <p></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div id="house-hours">
-            <h4>BCM House Hours</h4>
+            <h4>BCM Building Hours</h4>
             <p>Mon-Thurs 9:00am - 11:00pm</p>
             <p>Fri-Sat 9:00am - 12:00am</p>
             <p>Sunday 12:30pm - 11:00pm</p>
@@ -673,25 +632,21 @@
         </div>
         <div class="sec-content" id="get-connected">
           <div class="sec-img" id="life-group">
-            <img src="./Images/lifegroup_image.jpeg" />
-            <div class="overlay-text fadeIn slideSlow">
-              <h4>Life Group</h4>
+            <img src="./Images/home_page_life_groups.png" />
+            <div class="overlay-text fadeIn slideFast">
+              <a href="./get_connected.html">Learn More</a>
             </div>
           </div>
           <div class="sec-img" id="tnt">
-            <img src="./Images/TNT-image.JPEG" />
-            <div class="overlay-text fadeIn slideSlow">
-              <h4>
-                Thursday<br />
-                Night<br />
-                Together
-              </h4>
+            <img src="./Images/home_page_tnt.png" />
+            <div class="overlay-text fadeIn slideFast">
+              <a href="./get_connected.html">Learn More</a>
             </div>
           </div>
           <div class="sec-img" id="soul-food">
-            <img src="./Images/soul_food_edited (2).jpg" />
-            <div class="overlay-text fadeIn slideSlow">
-              <h4>Soul Food</h4>
+            <img src="./Images/home_page_soul_food.png" />
+            <div class="overlay-text fadeIn slideFast">
+              <a href="get_connected.html">Learn More</a>
             </div>
           </div>
         </div>
@@ -719,16 +674,25 @@
           <h2>Student Media</h2>
         </div>
         <div class="sec-content">
-          <img
-            src="Images/Soul Food (1) 2024.jpg"
-            class="image slideInLeft slideNormal easeOut"
-            alt=""
-          />
-          <img
-            src="Images/TNT Worship.jpg"
-            class="image slideInRight slideNormal easeOut"
-            alt=""
-          />
+          <iframe width="560" 
+           height="315" 
+           src="https://www.youtube.com/embed/videoseries?si=rQNK_ziAzP2dGDYO&amp;list=PLb-Ydal0iG0txUUsRKK8WwpxOeNteEfiO" 
+           title="YouTube video player" 
+           frameborder="0" 
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+           referrerpolicy="strict-origin-when-cross-origin" 
+           allowfullscreen
+           >
+          </iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4KTDqIIbnws7RYY4zn5t1o?utm_source=generator"
+           width="50%"
+           height="352" 
+           frameBorder="0" 
+           allowfullscreen="" 
+           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+           loading="lazy"
+           >
+          </iframe>
         </div>
       </div>
     </div>
@@ -746,18 +710,6 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </div>
-    <div class="section map" id="church-locations">
-      <div clas="sec-title">
-        <h2>Local Churches</h2>
-      </div>
-      <div>
-        <iframe
-          src="https://www.google.com/maps/d/embed?mid=1lIpdc8a7grtXkL_GmFhP2Xn2obbB5BM&ehbc=2E312F"
-          width="640"
-          height="480"
         ></iframe>
       </div>
     </div>
