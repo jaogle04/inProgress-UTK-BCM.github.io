@@ -83,12 +83,12 @@
         background-color: #b86014;
         padding: 10px;
         font-size: 30px;
-        color: #d9d9d9;
+        color: #f8e5c6;
       }
       #google-form:hover {
         transition-duration: 500ms;
-        background-color: rgba(184, 96, 20, 0.66);
-        color: black;
+        background-color: #f8e5c6;
+        color: #b86014;
       }
       .map {
         display: flex;
@@ -110,34 +110,47 @@
         </div>
       </div>
       <!-- Webpage Links -->
-      <div class="page-links">
+      <div class="page-links sticking">
+        <div class="link--text">
+          <a href="index.html">Home</a>
+        </div>
         <div class="button">
           <span>About <i class="arrow-down"></i></span>
           <div class="dropdown-content">
-            <a href="core_beliefs.html" class="link--text"
-              ><p>Core Beliefs</p></a
-            >
             <a href="missions_serving.html" class="link--text"
-              ><p>Missions & Serving</p></a
+              >Missions & Serving</a
             >
-            <a href="events.html" class="link--text"><p>Events</p></a>
-            <a href="staff.html" class="link--text"><p>Staff</p></a>
+            <a href="events.html" class="link--text">Events</a>
+            <a
+              href="https://www.utbaptist.org/contact-us.html"
+              class="link--text"
+              target="_blank"
+            >
+              Contact Us
+            </a>
           </div>
-        </div>
-        <div class="link--text">
-          <a href="index.html">Home</a>
         </div>
         <div class="link--text">
           <a href="get_connected.html">Get Connected</a>
         </div>
-        <div class="link--text">
-          <a href="student_media.html">Student Media</a>
+        <!-- <div class="button">
+          <span>Student Media <i class="arrow-down"></i></span>
+          <div class="dropdown-content">
+            <a href="./B_article.html" class="link--text"><p>The B Article</p></a>
+            <a href="" class="link--text"><p>Podcast</p></a>
+            <a href="" class="link--text"><p>Youtube Channel</p></a>
+          </div>
+        </div> -->
+        <div class="button">
+          <span>Alumni and Friends <i class="arrow-down"></i></span>
+          <div class="dropdown-content">
+            <a href="graduate_opportunities.html" class="link--text"
+              >Graduate Opportunities</a
+            >
+          </div>
         </div>
         <div class="link--text">
-          <a href="alumni_friends.html">Alumni & Friends</a>
-        </div>
-        <div class="link--text">
-          <a href="give.html">Give</a>
+          <a href="support.html">Support</a>
         </div>
       </div>
       <!-- Main Content -->
@@ -161,7 +174,9 @@
                 during the week, Lifegroups are a great place to build
                 relationships and grow closer with peers.
               </p>
-              <a src=""
+              <a
+                href="https://docs.google.com/forms/d/1QRdEMVwqMAxP9DkKyEO_hUtkkxO29_4C6LpvMHAD290/prefill"
+                target="_blank"
                 ><h5 class="button" id="google-form">Get Plugged-In</h5></a
               >
             </div>
@@ -220,9 +235,9 @@
           </div>
           <div>
             <iframe
-              src="https://www.google.com/maps/d/embed?mid=1lIpdc8a7grtXkL_GmFhP2Xn2obbB5BM&ehbc=2E312F"
+              src="https://www.google.com/maps/d/embed?mid=1hHSt7KY0GJipM7qKs5d_HeS93FFkPrY&ehbc=2E312F&noprof=1"
               width="900"
-              height="500"
+              height="550"
             ></iframe>
           </div>
         </div>
@@ -262,20 +277,6 @@
         </div>
       </div>
     </div>
-    <script>
-      //Page Links
-      const pageLinks = document.querySelector(".page-links");
-      const scrollWatcher = document.createElement("div");
-
-      scrollWatcher.setAttribute("data-scroll-watcher", "");
-      pageLinks.before(scrollWatcher);
-
-      const navObserver = new IntersectionObserver((entries) => {
-        console.log(entries);
-        pageLinks.classList.toggle("sticking", !entries[0].isIntersecting);
-      });
-
-      navObserver.observe(scrollWatcher);
-    </script>
+    <script src="./script.js" type="text/javascript"></script>
   </body>
 </html>
