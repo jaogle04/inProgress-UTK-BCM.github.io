@@ -25,6 +25,20 @@ a {
   margin: 0;
   padding: 0;
 }
+#logo-section {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: auto;
+  height: 125px;
+  z-index: 100;
+  margin-top: 15px;
+  padding: 0;
+}
+#BCM-logo {
+  margin-left: 15px;
+  height: 50px;
+}
 .header {
   display: flex;
   height: 75vh;
@@ -62,15 +76,40 @@ a {
   transition: background-color 200ms;
   box-shadow: 1px 1px 20px black;
 }
+/* Footer start */
 #footer {
-  display: grid;
   width: 100%;
-  grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  display: grid;
+  grid-template-columns: 0.1fr 0.7fr 0.18fr;
   grid-template-rows: 1fr;
   font-size: 12px;
-  text-align: left;
-  margin-top: 100px;
+  margin-top: 50px;
 }
+#icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 5em;
+  margin-right: 10px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#row-1 {
+  margin-bottom: -15px;
+}
+
+#tbmb {
+  display: flex;
+  justify-content: right;
+}
+#tbmb-logo {
+  height: auto;
+  width: 250px;
+}
+/* Footer end */
 .arrow-down {
   border: solid black;
   border-width: 0px 3px 3px 0px;
@@ -99,11 +138,6 @@ a {
 
 .paragraph {
   font-family: sans-serif;
-}
-
-#tbmb-logo {
-  align-items: right;
-  height: auto;
 }
 
 /* Utility Classes */
