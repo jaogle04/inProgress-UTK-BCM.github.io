@@ -24,7 +24,10 @@
   display: flex;
   flex-direction: column;
 }
-
+.button:hover .dropdown-pageLinks {
+  display: flex;
+  flex-direction: column;
+}
 .dropdown-content {
   transition-duration: 2s;
 }

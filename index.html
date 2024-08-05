@@ -212,7 +212,25 @@
         font-size: 15px;
         overflow: hidden;
       }
-      .greenCircle {
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        background-color: #b86014;
+        box-shadow: 1px 1px 5px black;
+      }
+      .dropdown-content>p{
+        padding: 10px;
+        margin: 0px;
+      }
+      .button:hover .dropdown-content{
+        display: flex;
+        flex-direction: column;
+      }
+      .orangeCircle {
         background-color: #b86014;
         border-radius: 50%;
         width: 40px;
@@ -220,6 +238,7 @@
         margin-left: 28%;
         margin-top: 12%;
       }
+
       #house-hours {
         display: flexbox;
         flex-direction: column;
@@ -322,7 +341,7 @@
     <div class="page-links sticking">
       <div class="button">
         <span>About <i class="arrow-down"></i></span>
-        <div class="dropdown-content">
+        <div class="dropdown-pageLinks">
           <a href="missions_serving.html" class="link--text"
             >Missions & Serving</a
           >
@@ -337,7 +356,7 @@
       </div>
       <!-- <div class="button">
         <span>Student Media <i class="arrow-down"></i></span>
-        <div class="dropdown-content">
+        <div class="dropdown-pageLinks">
           <a href="./B_article.html" class="link--text"><p>The B Article</p></a>
           <a href="" class="link--text"><p>Podcast</p></a>
           <a href="" class="link--text"><p>Youtube Channel</p></a>
@@ -345,7 +364,7 @@
       </div> -->
       <div class="button">
         <span>Alumni and Friends <i class="arrow-down"></i></span>
-        <div class="dropdown-content">
+        <div class="dropdown-pageLinks">
           <a href="graduate_opportunities.html" class="link--text">Graduate Opportunities</a>
         </div>
       </div>
@@ -392,258 +411,246 @@
               <div id="days">
                 <div class="cal-day button">
                   <div></div>
-                  <div class="greenCircle"></div>
+                  <div class="orangeCircle"></div>
                   <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div></div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div></div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div></div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>1</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>2</div>
-                  <div class="greenCircle"></div>
+                  <div class="orangeCircle"></div>
                   <div class="dropdown-content day-info fadeIn slideNormal">
-                    <p>
-                      is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s, when an unknown printer
-                      took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries,
-                      but also the leap into electronic typesetting, remaining
-                      essentially unchanged. It was popularised in the 1960s
-                      with the release of Letraset sheets containing Lorem Ipsum
-                      passages, and more recently with desktop publishing
-                      software like Aldus PageMaker including versions of Lorem
-                      Ipsum.
-                    </p>
+                    <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>3</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>4</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>5</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>6</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>7</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>8</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>9</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>10</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideCircle">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>11</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>12</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>13</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
-                    <p></p>
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
+                    <p>Smores<br>9 PM<br>Join us for late-night snack and campfire conversations</p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>14</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
-                    <p></p>
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
+                    <p>Luau<br>8 PM<br>Break out your best (or worst) Hawaiian shirt</p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>15</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
-                    <p></p>
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
+                    <p>Survival<br>4 PM - 6 PM<br></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>16</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
-                    <p></p>
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
+                    <p>Ped Popsicle Tours<br>1 PM - 3 PM</p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>17</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>18</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>19</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>20</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>21</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>22</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>23</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>24</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>25</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>26</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>27</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>28</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>29</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>30</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
-                <div class="cal-day">
+                <div class="cal-day button">
                   <div>31</div>
-                  <div class="greenCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="orangeCircle"></div>
+                  <div class="dropdown-content day-info fadeIn slideNormal">
                     <p></p>
                   </div>
                 </div>
@@ -854,23 +861,45 @@
     <script src="./script.js" type="text/javascript"></script>
     <script>
       // Calendar
+      // for orange circle
       document.addEventListener("DOMContentLoaded", function () {
         var dayInfoElements = document.getElementsByClassName("day-info");
-        var greenCircleElements =
-          document.getElementsByClassName("greenCircle");
+        var orangeCircleElements =
+          document.getElementsByClassName("orangeCircle");
 
         // Ensure both collections have the same length
-        if (dayInfoElements.length === greenCircleElements.length) {
+        if (dayInfoElements.length === orangeCircleElements.length) {
           for (var i = 0; i < dayInfoElements.length; i++) {
             if (dayInfoElements[i].textContent.trim().length > 0) {
-              greenCircleElements[i].style.display = "block"; // Show the element with class "greenCircle"
+              orangeCircleElements[i].style.display = "block"; // Show the element with class "greenCircle"
             } else {
-              greenCircleElements[i].style.display = "none"; // Hide the element with class "greenCircle"
+              orangeCircleElements[i].style.display = "none"; // Hide the element with class "greenCircle"
             }
           }
         } else {
           console.error(
-            "The number of day-info elements does not match the number of greenCircle elements."
+            "The number of day-info elements does not match the number of orangeCircle elements."
+          );
+        }
+      });
+      // Listening for Button hover
+      document.addEventListener("DOMContentLoaded", function () {
+        var dayInfoElements = document.getElementsByClassName("day-info");
+        var dropDownElements =
+          document.getElementsByClassName("dropdown-content");
+
+        // Ensure both collections have the same length
+        if (dayInfoElements.length === dropDownElements.length) {
+          for (var i = 0; i < dayInfoElements.length; i++) {
+            if (dayInfoElements[i].textContent.trim().length > 0) {
+              dropDownElements[i].style.display = "dropdown-content"; // Hover will work
+            } else {
+              dropDownElements[i].style.display = "none"; // hover will not work
+            }
+          }
+        } else {
+          console.error(
+            "The number of day-info elements does not match the number of dropDown elements."
           );
         }
       });
