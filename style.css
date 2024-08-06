@@ -1,148 +1,3 @@
-html {
-  font-size: 30px;
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-* {
-  box-sizing: inherit;
-}
-a {
-  text-decoration: none;
-  color: black;
-}
-.container {
-  flex-direction: column;
-  display: flex;
-  position: relative;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-#logo-section {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  width: auto;
-  height: 125px;
-  z-index: 100;
-  margin-top: 15px;
-  padding: 0;
-}
-#BCM-logo {
-  margin-left: 15px;
-  height: 50px;
-}
-.header {
-  display: flex;
-  height: 75vh;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.header-text {
-  text-align: center;
-}
-.title {
-  font-size: 4rem;
-}
-.subtitle {
-  font-size: 3rem;
-}
-.page-links {
-  position: sticky;
-  background-color: rgba(184, 96, 20, 0.66);
-  top: 0px;
-  display: flex;
-  padding: 10px;
-  width: 100%;
-  height: auto;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1rem;
-  font-family: sans-serif;
-  box-shadow: 1px 1px 1px black;
-  z-index: 98;
-}
-.sticking {
-  background-color: #f8e5c6;
-  transition: background-color 200ms;
-  box-shadow: 1px 1px 20px black;
-}
-/* Footer start */
-#footer {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 0.1fr 0.7fr 0.18fr;
-  grid-template-rows: 1fr;
-  font-size: 12px;
-  margin-top: 50px;
-}
-#icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 5em;
-  margin-right: 10px;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-#row-1 {
-  margin-bottom: -15px;
-}
-
-#tbmb {
-  display: flex;
-  justify-content: right;
-}
-#tbmb-logo {
-  height: auto;
-  width: 250px;
-}
-/* Footer end */
-.arrow-down {
-  border: solid black;
-  border-width: 0px 3px 3px 0px;
-  display: inline-block;
-  padding: 3px;
-  margin-bottom: 3px;
-  transform: rotate(226deg);
-  -webkit-transform: rotate(226deg);
-}
-.dropdown-pageLinks {
-  display: none;
-  position: absolute;
-  z-index: 99;
-  padding: 15px;
-  margin: 0px;
-  gap: 10px;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-family: sans-serif;
-  background-color: #b86014;
-  box-shadow: 1px 1px 5px black;
-}
-.dropdown-pageLinks > a {
-  color: #f8e5c6;
-}
-.dropdown-content > a {
-  color: #f8e5c6;
-}
-
-.paragraph {
-  font-family: sans-serif;
-}
-
 /* Utility Classes */
 .align-left {
   text-align: left;
@@ -185,4 +40,211 @@ a {
 }
 .light-bold {
   font-weight: 300;
+}
+/* End of Utility Classes */
+html {
+  font-size: 30px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#logo-section {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: auto;
+  height: 125px;
+  z-index: 110;
+  margin-top: 15px;
+  padding: 0;
+}
+#BCM-logo {
+  margin-left: 15px;
+  height: 50px;
+}
+.header {
+  display: flex;
+  height: 75vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header-text {
+  text-align: center;
+}
+.title {
+  font-size: 4rem;
+}
+.subtitle {
+  font-size: 3rem;
+}
+.page-links {
+  position: sticky;
+  z-index: 100;
+  background-color: rgba(184, 96, 20, 0.66);
+  top: 0px;
+  display: flex;
+  padding: 10px 0px 10px 0px;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  font-family: sans-serif;
+  box-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+}
+.sticking {
+  background-color: #f8e5c6;
+  transition: background-color 200ms;
+  box-shadow: 1px 1px 20px black;
+}
+#page-links-hamburger {
+  display: none;
+}
+/* Footer start */
+#footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.1fr 0.7fr 0.18fr;
+  grid-template-rows: 1fr;
+  font-size: 12px;
+  margin-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 5em;
+  margin-right: 10px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#row-1 {
+  margin-bottom: -15px;
+}
+
+#tbmb {
+  display: flex;
+  justify-content: right;
+}
+#tbmb-logo {
+  height: auto;
+  width: 250px;
+}
+/* Footer end */
+.arrow-down {
+  border: solid black;
+  border-width: 0px 3px 3px 0px;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 3px;
+  transform: rotate(226deg);
+  -webkit-transform: rotate(226deg);
+}
+.dropdown-pageLinks {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  padding: 15px;
+  margin: 0px;
+  gap: 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  background-color: #b86014;
+  box-shadow: 1px 1px 5px black;
+}
+.dropdown-pageLinks > a {
+  color: #f8e5c6;
+}
+.dropdown-content > a {
+  color: #f8e5c6;
+}
+
+.paragraph {
+  font-family: sans-serif;
+}
+@media (min-width: 401px) {
+  .sticking {
+    background-color: #f8e5c6;
+    transition: background-color 200ms;
+    box-shadow: 1px 1px 20px black;
+  }
+}
+/* Phone Width */
+@media (max-width: 400px) {
+  #top-section {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #page-links-hamburger {
+    /* position: absolute; */
+    z-index: 200;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 15px;
+    width: 30px;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(3, 5px);
+    gap: 2px;
+  }
+  .hamburger-sec {
+    background-color: black;
+    border-radius: 10px;
+  }
+  .page-links {
+    height: 100vh;
+    width: 100%;
+    z-index: 150;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    text-align: left;
+    font-size: 0.85rem;
+    gap: 30px;
+    background-color: #f8e5c6;
+    text-transform: uppercase;
+  }
+  .dropdown-pageLinks {
+    padding: 10px;
+    gap: 7px;
+    font-size: 0.7rem;
+  }
+  .hide {
+    display: none;
+  }
 }
