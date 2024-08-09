@@ -33,6 +33,7 @@
       href="https://fonts.googleapis.com/css2?family=Allura&family=Archivo+Black&family=Chivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap" 
       rel="stylesheet"
     />
+    <link rel="icon" href="./favicon.ico">
     <style>
       #logo-section {
         display: flex;
@@ -44,48 +45,15 @@
         margin-top: 15px;
         padding: 0;
       }
-      .hamburger {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: 125px;
-        justify-content: center;
-        gap: 10px;
-        margin: 0;
-      }
-      .hamburger-sec {
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        width: auto;
-        align-items: center;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-      .white-circle {
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background-color: white;
-        margin-right: 5px;
-      }
-      .white-dash {
-        height: 20px;
-        width: 75px;
-        background-color: white;
-        border-radius: 10px;
-        margin: 0;
-      }
       #BCM-logo {
         margin-left: 15px;
         height: 50px;
       }
 
       .header {
-        display: flexbox;
+        display: flex;
         flex-direction: column;
         position: relative;
-        overflow: hidden;
         background-color: #b86014;
       }
       .header-text {
@@ -101,6 +69,7 @@
         text-align: center;
         font-family: "jost", sans-serif;
         font-weight: 400;
+        text-transform: uppercase;
       }
       #BCM{
         display: flex;
@@ -142,13 +111,9 @@
         font-family: sans-serif;
         margin-bottom: 50px;
         position: relative;
+        gap: 75px;
       }
       /* Calendar Style */
-      .section {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-      }
       .info-container {
         display: flex;
         flex-direction: row;
@@ -176,7 +141,7 @@
         padding: 20px 10px 20px 10px;
       }
       #daysOfWeek {
-        display: grid;
+        display: grid;  
         grid-template-columns: repeat(7, 100px);
         grid-template-rows: auto;
         margin: 0;
@@ -215,7 +180,9 @@
       .dropdown-content {
         display: none;
         position: absolute;
-        z-index: 99;
+        margin-top: 10px;
+        margin-left: 30px;
+        z-index: 50;
         border-radius: 10px;
         font-size: 0.8rem;
         font-family: sans-serif;
@@ -227,7 +194,7 @@
         margin: 0px;
       }
       .button:hover .dropdown-content{
-        display: flex;
+        display: inline-block;
         flex-direction: column;
       }
       .orangeCircle {
@@ -245,11 +212,11 @@
         margin-left: 75px;
       }
       /*  */
-      .map {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      .section {
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        margin: 0 10px 0 10px;
       }
       .sec-content > img {
         height: 400px;
@@ -268,21 +235,18 @@
         gap: 10px;
       }
       .image {
-        border-radius: 5%;
-        box-shadow: 0 0.4rem 0.3rem 0.1rem black;
+        border-radius: 10px ;
+        box-shadow:0 0.2rem 0.2rem 0.1rem black;
       }
       .paragraph {
         max-width: 700px;
         font-family: sans-serif;
         text-align: left;
+        font-size: 1rem;
       }
       #get-connected {
         justify-content: center;
         gap: 5%;
-      }
-      .sec-img {
-        position: relative;
-        display: inline-block;
       }
       .sec-img > img {
         border-radius: 5px;
@@ -309,36 +273,198 @@
         font-family: "Times New Roman", Times, serif;
         background-color: rgba(255, 255, 255, 0.8);
       }
+      #mission-sec-content{
+        justify-content: space-evenly;
+      }
+      .map {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width:400px) {
+        #top-section {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        #top-section-sticking {
+          background-color: #f8e5c6;
+          position: sticky;
+          transition: background-color 200ms;
+          box-shadow: 1px 1px 20px black;
+        }
+        #logo-section {
+          height: auto;
+          margin: 0;
+          margin-top: 10px;
+          position: relative;
+        }
+        #BCM-logo {
+          height: 1.5em;
+        }
+        #page-links-hamburger {
+          position: relative;
+          margin-top: 10px;
+          margin-right: 10px;
+          width: auto;
+          grid-template-rows: repeat(3, 7px);
+          grid-template-columns: 40px;
+          gap: 5px;
+        }
+        .header {
+          width: 100%;
+          height: auto;
+          margin: 0;
+        }
+        .header-text {
+          width: 100%;
+          align-items: start;
+          color: white;
+          gap:50px;
+          margin-top: 80px;
+        }
+        .subtitle {
+          font-size: 2.2rem;
+          margin-top:0;
+          margin-bottom: 0;
+          text-transform: uppercase;
+        }
+        #BCM{
+          display: flex;
+          flex-direction: column;
+          /* gap: 10px; */
+        }
+        .logo-letter {
+          margin-top: -80px;
+          font-size: 10rem;
+        }
+        .section{
+          margin: 0 10px 0 10px;
+        }
+        .sec-title{
+          margin: 15px 15px 0 15px;
+        }
+        .sec-content{
+          flex-direction: column;
+          margin: 0 15px 15px 15px;
+        }
+        .calendar{
+          width: 100%;
+        }
+        #daysOfWeek{
+          grid-template-columns: repeat(7,40px);
+          font-size: 15px;
+        }
+        .cal-day{
+          font-size: 15px;
+        }
+        #days{
+          grid-template-columns: repeat(7,40px);
+          grid-template-rows: repeat(5,40px);
+        }
+        .orangeCircle{
+          height: 15px;
+          width: 15px;
+          margin-top: 0;
+        }
+        .dropdown-content{
+          margin-left: 10px;
+          margin-top: 1px;
+          font-size: 10px;
+          width:80px;
+        }
+        #house-hours{
+          margin-left: 5px;
+        }
+        #get-connected{
+          align-items: center;
+          gap: 20px;
+        }
+        .sec-img>img{
+          display: flex;
+          height: 300px;
+        }
+        #missions-sec-content{
+          align-items: center;
+        }
+        .sec-content > img{
+          width: 300px;
+          height: auto;
+          display: none;
+        }
+        .paragraph{
+          font-size: 20px;
+        }
+        #student-media-content{
+          align-items: center;
+          gap: 20px;
+        }
+        #youtube-iframe{
+          width: 300px;
+          border-radius: 10px;
+        }
+        #spotify-iframe{
+          width: 300px;
+        }
+        #location-map{
+          width: 320px;
+          height: 250px;
+        }
+      }
     </style>
   </head>
 
   <body class="container">
-    <div id="logo-section">
-      <a href="index.html">
-        <img
-          id="BCM-logo"
-          src="./Images/BCM_logo_1_edited.PNG"
-          alt="University of Tennessee Baptist Collegiate Ministry logo"
-        />
-      </a>
+    <div id="top-section">
+      <div id="logo-section">
+        <a href="index.html">
+          <img
+            id="BCM-logo"
+            src="./Images/BCM_logo_1_edited.PNG"
+            alt="University of Tennessee Baptist Collegiate Ministry logo"
+          />
+        </a>
+      </div>
+      <!-- hamburger -->
+      <div id="page-links-hamburger">
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
+      </div>
     </div>
     <!-- Header -->
     <div class="header">
       <!-- Text of Header -->
-      <div class="header">
+      <div>
         <div class="header-text">
-          <h1 class="subtitle">welcome to</h1>
+          <div class="subtitle">
+            <h1 class="subtitle">welcome to</h1>
+          </div>
+          <div id="BCM">
+            <div id="first-letter" class="logo-letter">b</div>
+            <div id="second-letter" class="logo-letter">c</div>
+            <div id="third-letter" class="logo-letter">m</div>
+          </div>
         </div>
-        <div id="BCM">
+        <!-- <div id="BCM">
           <div id="first-letter" class="logo-letter">b</div>
           <div id="second-letter" class="logo-letter">c</div>
           <div id="third-letter" class="logo-letter">m</div>
-        </div>
+        </div> -->
       </div>
       </div>
     </div>
     <!-- Webpage Links -->
-    <div class="page-links sticking">
+    <div class="page-links hide sticking">
+      <div class="page--link">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="link--text">
+        <a href="get_connected.html">Get Connected</a>
+      </div>
       <div class="button">
         <span>About <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
@@ -350,9 +476,6 @@
             Contact Us
           </a>
         </div>
-      </div>
-      <div class="link--text">
-        <a href="get_connected.html">Get Connected</a>
       </div>
       <!-- <div class="button">
         <span>Student Media <i class="arrow-down"></i></span>
@@ -379,7 +502,7 @@
         <div class="sec-title">
           <h2>Month at a Glance</h2>
         </div>
-        <div class="info-container">
+        <div class="sec-content">
           <div class="cal-container">
             <div class="calendar">
               <div id="month">
@@ -412,91 +535,91 @@
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>1</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>2</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>3</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>4</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>5</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>6</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>7</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>8</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>9</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
@@ -510,147 +633,147 @@
                 <div class="cal-day button">
                   <div>11</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>12</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>13</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p>Smores<br>9 PM<br>Join us for late-night snack and campfire conversations</p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>14</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p>Luau<br>8 PM<br>Break out your best (or worst) Hawaiian shirt</p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>15</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p>Survival<br>4 PM - 6 PM<br></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>16</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p>Ped Popsicle Tours<br>1 PM - 3 PM</p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>17</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>18</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>19</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>20</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>21</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>22</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>23</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>24</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>25</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>26</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>27</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>28</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>29</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>30</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>31</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideNormal">
+                  <div class="dropdown-content day-info fadeIn slideFast">
                     <p></p>
                   </div>
                 </div>
@@ -696,9 +819,9 @@
         <div class="sec-title">
           <h2>Missions</h2>
         </div>
-        <div class="sec-content">
-          <img class="slideInLeft slideNormal easeOut" />
-          <p class="paragraph slideInRight slideNormal easeOut">
+        <div  id="mission-sec-content" class="sec-content">
+          <img src="./Images/mission.jpg" class="image" />
+          <p class="paragraph">
             At the BCM, we want to provide students with many opportunities to
             practically live out Matthew 28. We strive to share the gospel on
             UT's campus through The Great Exchange, by participating in Disaster
@@ -713,8 +836,10 @@
         <div class="sec-title">
           <h2>Student Media</h2>
         </div>
-        <div class="sec-content">
-          <iframe width="560" 
+        <!-- youtube -->
+        <div id="student-media-content" class="sec-content">
+          <iframe  id="youtube-iframe"
+           width="560" 
            height="315" 
            src="https://www.youtube.com/embed/videoseries?si=rQNK_ziAzP2dGDYO&amp;list=PLb-Ydal0iG0txUUsRKK8WwpxOeNteEfiO" 
            title="YouTube video player" 
@@ -724,7 +849,10 @@
            allowfullscreen
            >
           </iframe>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4KTDqIIbnws7RYY4zn5t1o?utm_source=generator"
+        <!-- spotify -->
+          <iframe id="spotify-iframe"
+           style="border-radius:12px" 
+           src="https://open.spotify.com/embed/show/4KTDqIIbnws7RYY4zn5t1o?utm_source=generator"
            width="50%"
            height="352" 
            frameBorder="0" 
@@ -742,7 +870,7 @@
         <h2>Location</h2>
       </div>
       <div>
-        <iframe
+        <iframe id="location-map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6459.427854503983!2d-83.9354058879843!3d35.953967472385635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c3d5f681e7801%3A0x634029a3a33e3a55!2sBaptist%20Collegiate%20Ministry!5e0!3m2!1sen!2sus!4v1720637639476!5m2!1sen!2sus"
           width="900"
           height="450"
@@ -754,8 +882,7 @@
       </div>
     </div>
     <br />
-    <!-- Footer, might not need to be in a different div -->
-    <!-- footer having some issues, going to style it on another page and maybe save it for last out of high priority things to do -->
+    <!-- Footer -->
     <div id="footer">
       <div id="icons" class="footer-section">
         <div id="row-1" class="row">
@@ -834,8 +961,8 @@
             1811 Melrose Avenue Knoxville, TN 379161811 Melrose Avenue
             Knoxville, TN 37916
           </p>
-          <p class="">865-546-8272 (office) • 865-546-8273 (fax)</p>
-          <p class="">baptist@utk.edu (email)</p>
+          <p class=""><a href="tel:865-546-8272" class="underline">865-546-8272 (office)</a> • 865-546-8273 (fax)</p>
+          <p class="underline"><a href="mailto:baptist@utk.edu" target>baptist@utk.edu (email)</a></p>
         </div>
         <div class="">
           <p>
