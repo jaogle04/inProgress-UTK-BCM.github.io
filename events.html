@@ -13,6 +13,13 @@
         background-size: cover;
         color: white;
       }
+      .subtitle {
+        margin: 0;
+      }
+      .title {
+        margin: 0;
+        font-size: 5rem;
+      }
       .page-links {
         margin-bottom: 100px;
       }
@@ -30,34 +37,81 @@
       .sec-title {
         text-transform: uppercase;
       }
-      .sec-img {
+      .image {
         width: 500px;
         border-radius: 30px;
         box-shadow: 0rem 0.3rem 0.5rem black;
         z-index: 1;
       }
+      @media screen and (max-width: 400px) {
+        .header {
+          height: auto;
+          background-image: none;
+          background-color: #b86014;
+          padding-top: 100px;
+        }
+        .subtitle {
+          font-size: 2rem;
+          margin: 0;
+        }
+        .title {
+          font-size: 3rem;
+          margin-top: 0;
+        }
+        .section {
+          flex-direction: column;
+          height: auto;
+        }
+        .main-content {
+          gap: 100px;
+          margin: 10px 10px 0 10px;
+        }
+        .sec-title {
+          margin-top: 20px;
+          font-size: 1.5rem;
+        }
+        .content-words {
+          width: auto;
+        }
+        .image {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body class="container">
-    <div id="logo-section">
-      <a href="index.html">
-        <img
-          id="BCM-logo"
-          src="./Images/BCM_logo_1_edited.PNG"
-          alt="University of Tennessee Baptist Collegiate Ministry logo"
-        />
-      </a>
+    <!-- top section -->
+    <div id="top-section">
+      <div id="logo-section">
+        <a href="index.html">
+          <img
+            id="BCM-logo"
+            src="./Images/BCM_logo_1_edited.PNG"
+            alt="University of Tennessee Baptist Collegiate Ministry logo"
+          />
+        </a>
+      </div>
+      <div id="page-links-hamburger">
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
+      </div>
     </div>
     <!-- Header -->
     <div class="header">
       <div class="header-text">
+        <h1 class="subtitle">UTK BCM</h1>
         <h1 class="title">EVENTS</h1>
       </div>
     </div>
     <!-- Webpage Links -->
-    <div class="page-links sticking">
+    <!-- Webpage links -->
+    <div class="page-links hide sticking">
       <div class="link--text">
         <a href="index.html">Home</a>
+      </div>
+      <div class="link--text">
+        <a href="get_connected.html">Get Connected</a>
       </div>
       <div class="button">
         <span>About <i class="arrow-down"></i></span>
@@ -75,9 +129,6 @@
           </a>
         </div>
       </div>
-      <div class="link--text">
-        <a href="get_connected.html">Get Connected</a>
-      </div>
       <!-- <div class="button">
         <span>Student Media <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
@@ -92,6 +143,7 @@
           <a href="graduate_opportunities.html" class="link--text"
             >Graduate Opportunities</a
           >
+          <a href="get_in_touch.html" class="link--text">Get in Touch</a>
         </div>
       </div>
       <div class="link--text">
@@ -103,7 +155,7 @@
       <!-- Fall Retreat -->
       <div class="section">
         <img
-          class="sec-img slideInLeft slideNormal easeOut"
+          class="image slideInLeft slideNormal easeOut"
           src="./Images/Fall Retreat.jpeg"
           widht=""
           alt=""
@@ -131,7 +183,7 @@
           </p>
         </div>
         <img
-          class="sec-img slideInRight slideNormal easeOut"
+          class="image slideInRight slideNormal easeOut"
           src="./Images/Barn Party.jpeg"
           widht=""
           alt=""
@@ -140,7 +192,7 @@
       <!-- Winter Retreat -->
       <div class="section">
         <img
-          class="sec-img slideInLeft slideNormal easeOut"
+          class="image slideInLeft slideNormal easeOut"
           src="./Images/winter_retreat_img.jpeg"
           widht=""
           alt=""
@@ -170,7 +222,7 @@
           </p>
         </div>
         <img
-          class="sec-img slideInRight slideNormal easeOut"
+          class="image slideInRight slideNormal easeOut"
           src="./Images/Spring Fling.jpeg"
           width=""
           alt=""
@@ -256,8 +308,15 @@
             1811 Melrose Avenue Knoxville, TN 379161811 Melrose Avenue
             Knoxville, TN 37916
           </p>
-          <p class="">865-546-8272 (office) • 865-546-8273 (fax)</p>
-          <p class="">baptist@utk.edu (email)</p>
+          <p class="">
+            <a href="tel:865-546-8272" class="underline"
+              >865-546-8272 (office)</a
+            >
+            • 865-546-8273 (fax)
+          </p>
+          <p class="underline">
+            <a href="mailto:baptist@utk.edu" target>baptist@utk.edu (email)</a>
+          </p>
         </div>
         <div class="">
           <p>

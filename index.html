@@ -35,21 +35,6 @@
     />
     <link rel="icon" href="./favicon.ico">
     <style>
-      #logo-section {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        width: auto;
-        height: 125px;
-        z-index: 100;
-        margin-top: 15px;
-        padding: 0;
-      }
-      #BCM-logo {
-        margin-left: 15px;
-        height: 50px;
-      }
-
       .header {
         display: flex;
         flex-direction: column;
@@ -99,12 +84,6 @@
         height: 400px;
         margin: 0;
       }
-      /* .title {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        font-size: 9rem;
-      } */
       .main-content {
         flex-direction: column;
         display: flex;
@@ -112,6 +91,9 @@
         margin-bottom: 50px;
         position: relative;
         gap: 75px;
+      }
+      #month-at-glance-content{
+        justify-content: space-around;
       }
       /* Calendar Style */
       .info-container {
@@ -139,6 +121,9 @@
         background-color: #b86014;
         border-radius: 5% 5% 1% 1%;
         padding: 20px 10px 20px 10px;
+      }
+      #month{
+        font-size: 1.2rem
       }
       #daysOfWeek {
         display: grid;  
@@ -205,11 +190,11 @@
         margin-left: 28%;
         margin-top: 12%;
       }
-
       #house-hours {
         display: flexbox;
         flex-direction: column;
-        margin-left: 75px;
+        margin-left: 0;
+        font-size: 1.1rem;
       }
       /*  */
       .section {
@@ -282,37 +267,12 @@
         justify-content: center;
         align-items: center;
       }
-      @media (max-width:400px) {
-        #top-section {
-          width: 100%;
-          position: absolute;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
+      @media screen and (max-width:400px) {
         #top-section-sticking {
           background-color: #f8e5c6;
           position: sticky;
           transition: background-color 200ms;
           box-shadow: 1px 1px 20px black;
-        }
-        #logo-section {
-          height: auto;
-          margin: 0;
-          margin-top: 10px;
-          position: relative;
-        }
-        #BCM-logo {
-          height: 1.5em;
-        }
-        #page-links-hamburger {
-          position: relative;
-          margin-top: 10px;
-          margin-right: 10px;
-          width: auto;
-          grid-template-rows: repeat(3, 7px);
-          grid-template-columns: 40px;
-          gap: 5px;
         }
         .header {
           width: 100%;
@@ -324,7 +284,7 @@
           align-items: start;
           color: white;
           gap:50px;
-          margin-top: 80px;
+          margin-top: 0;
         }
         .subtitle {
           font-size: 2.2rem;
@@ -338,7 +298,7 @@
           /* gap: 10px; */
         }
         .logo-letter {
-          margin-top: -80px;
+          margin-top: -20%;
           font-size: 10rem;
         }
         .section{
@@ -353,6 +313,9 @@
         }
         .calendar{
           width: 100%;
+        }
+        #month{
+          font-size: 0.8rem;
         }
         #daysOfWeek{
           grid-template-columns: repeat(7,40px);
@@ -378,6 +341,7 @@
         }
         #house-hours{
           margin-left: 5px;
+          font-size: 0.8rem;
         }
         #get-connected{
           align-items: center;
@@ -416,8 +380,8 @@
       }
     </style>
   </head>
-
   <body class="container">
+    <!-- top section -->
     <div id="top-section">
       <div id="logo-section">
         <a href="index.html">
@@ -457,9 +421,9 @@
       </div>
       </div>
     </div>
-    <!-- Webpage Links -->
+    <!-- Webpage links -->
     <div class="page-links hide sticking">
-      <div class="page--link">
+      <div class="link--text">
         <a href="index.html">Home</a>
       </div>
       <div class="link--text">
@@ -472,7 +436,11 @@
             >Missions & Serving</a
           >
           <a href="events.html" class="link--text">Events</a>
-          <a href="https://www.utbaptist.org/contact-us.html" class="link--text" target="_blank">
+          <a
+            href="https://www.utbaptist.org/contact-us.html"
+            class="link--text"
+            target="_blank"
+          >
             Contact Us
           </a>
         </div>
@@ -488,7 +456,10 @@
       <div class="button">
         <span>Alumni and Friends <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
-          <a href="graduate_opportunities.html" class="link--text">Graduate Opportunities</a>
+          <a href="graduate_opportunities.html" class="link--text"
+            >Graduate Opportunities</a
+          >
+          <a href="get_in_touch.html" class="link--text">Get in Touch</a>
         </div>
       </div>
       <div class="link--text">
@@ -502,7 +473,7 @@
         <div class="sec-title">
           <h2>Month at a Glance</h2>
         </div>
-        <div class="sec-content">
+        <div id="month-at-glance-content" class="sec-content">
           <div class="cal-container">
             <div class="calendar">
               <div id="month">

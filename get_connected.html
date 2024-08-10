@@ -20,10 +20,6 @@
       rel="stylesheet"
     />
     <style>
-      .container {
-        width: 100%;
-        height: auto;
-      }
       .header {
         background-image: url(./Images/life_img.jpeg);
         background-position: center;
@@ -42,7 +38,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 450px;
+        height: auto;
+        margin-top: 50px;
       }
       .content {
         flex-direction: row;
@@ -66,6 +63,9 @@
       }
       .paragraph {
         font-size: 0.9rem;
+      }
+      .image{
+        width: 500px;
       }
       .image {
         border-radius: 5%;
@@ -97,30 +97,73 @@
         align-items: center;
         margin-bottom: 25px;
       }
+      @media screen and (max-width: 400px){
+        .title{
+          font-size: 1.8rem;
+          overflow-wrap: break-word;
+        }
+        .section{
+          flex-direction: column;
+          height: auto;
+        }
+        .content{
+          flex-direction: column;
+        }
+        .sec-title{
+          margin-top: 20px;
+          font-size: 1.5rem
+        }
+        .content-words{
+          width: auto;
+        }
+        .image{
+          display: none;
+        }
+        #google-form{
+          margin-top: 5px;
+        }
+        .map{
+          margin-top: 100px;
+        }
+        #church-locations{
+          width: 350px;
+          height: 300px;
+        }
+      }
     </style>
   </head>
-  <body>
-    <div id="logo-section">
-      <a href="index.html">
-        <img
-          id="BCM-logo"
-          src="./Images/BCM_logo_1_edited.PNG"
-          alt="University of Tennessee Baptist Collegiate Ministry logo"
-        />
-      </a>
-    </div>
-    <!-- Header -->
-    <div>
-      <div class="header">
-        <div class="header-text">
-          <h1 class="title">GET CONNECTED</h1>
-        </div>
+  <body class="container">
+    <!-- top section -->
+    <div id="top-section">
+      <div id="logo-section">
+        <a href="index.html">
+          <img
+            id="BCM-logo"
+            src="./Images/BCM_logo_1_edited.PNG"
+            alt="University of Tennessee Baptist Collegiate Ministry logo"
+          />
+        </a>
+      </div>
+      <div id="page-links-hamburger">
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
       </div>
     </div>
-    <!-- Webpage Links -->
-    <div class="page-links sticking">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-text">
+        <h1 class="title">GET CONNECTED</h1>
+      </div>
+    </div>
+    </div>
+    <!-- Webpage links -->
+    <div class="page-links hide sticking">
       <div class="link--text">
         <a href="index.html">Home</a>
+      </div>
+      <div class="link--text">
+        <a href="get_connected.html">Get Connected</a>
       </div>
       <div class="button">
         <span>About <i class="arrow-down"></i></span>
@@ -138,23 +181,21 @@
           </a>
         </div>
       </div>
-      <div class="link--text">
-        <a href="get_connected.html">Get Connected</a>
-      </div>
       <!-- <div class="button">
-          <span>Student Media <i class="arrow-down"></i></span>
-          <div class="dropdown-pageLinks">
-            <a href="./B_article.html" class="link--text"><p>The B Article</p></a>
-            <a href="" class="link--text"><p>Podcast</p></a>
-            <a href="" class="link--text"><p>Youtube Channel</p></a>
-          </div>
-        </div> -->
+        <span>Student Media <i class="arrow-down"></i></span>
+        <div class="dropdown-pageLinks">
+          <a href="./B_article.html" class="link--text"><p>The B Article</p></a>
+          <a href="" class="link--text"><p>Podcast</p></a>
+          <a href="" class="link--text"><p>Youtube Channel</p></a>
+        </div>
+      </div> -->
       <div class="button">
         <span>Alumni and Friends <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
           <a href="graduate_opportunities.html" class="link--text"
             >Graduate Opportunities</a
           >
+          <a href="get_in_touch.html" class="link--text">Get in Touch</a>
         </div>
       </div>
       <div class="link--text">
@@ -169,7 +210,6 @@
           <img
             class="image slideInLeft slideNormal easeOut"
             src="./Images/lifegroup_image.jpeg"
-            width="500px"
             alt="Girls' Lifegroup Picture"
           />
           <div class="content-words">
@@ -209,7 +249,6 @@
             id="TNT-image"
             class="image slideInRight slideNormal easeOut"
             src="./Images/TNT-image.JPEG"
-            width="500px"
             alt="Speaker giving a sermon at TNT"
           />
         </div>
@@ -220,7 +259,6 @@
           <img
             class="image slideInLeft slideNormal easeOut"
             src="./Images/soul_food_image.jpeg"
-            width="500px"
             alt="group of students eating in dining area at the BCM during Soul Food"
           />
           <div class="content-words">
@@ -237,12 +275,14 @@
           </div>
         </div>
       </div>
-      <div class="map" id="church-locations">
+      <!-- map -->
+      <div class="map">
         <div clas="sec-title">
           <h2>Local Churches</h2>
         </div>
         <div>
-          <iframe
+          <iframe  
+            id="church-locations"
             src="https://www.google.com/maps/d/embed?mid=1hHSt7KY0GJipM7qKs5d_HeS93FFkPrY&ehbc=2E312F&noprof=1"
             width="900"
             height="550"
@@ -329,8 +369,15 @@
             1811 Melrose Avenue Knoxville, TN 379161811 Melrose Avenue
             Knoxville, TN 37916
           </p>
-          <p class="">865-546-8272 (office) • 865-546-8273 (fax)</p>
-          <p class="">baptist@utk.edu (email)</p>
+          <p class="">
+            <a href="tel:865-546-8272" class="underline"
+              >865-546-8272 (office)</a
+            >
+            • 865-546-8273 (fax)
+          </p>
+          <p class="underline">
+            <a href="mailto:baptist@utk.edu" target>baptist@utk.edu (email)</a>
+          </p>
         </div>
         <div class="">
           <p>

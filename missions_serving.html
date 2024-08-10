@@ -85,13 +85,62 @@
         bottom: 0;
         background-color: rgba(255, 255, 255, 0.6);
       }
+      @media screen and (max-width: 400px) {
+        .section {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+        }
+        #verse {
+          font-size: 1rem;
+          text-align: left;
+        }
+        .poster {
+          display: flex;
+          flex-direction: column;
+        }
+        .collage-img {
+          /* display: flex; */
+          flex-direction: column;
+          display: none;
+        }
+        div > img {
+          height: auto;
+          width: 300px;
+        }
+        #footer {
+          position: relative;
+        }
+      }
     </style>
   </head>
   <body class="container">
+    <!-- top section -->
+    <div id="top-section">
+      <div id="logo-section">
+        <a href="index.html">
+          <img
+            id="BCM-logo"
+            src="./Images/BCM_logo_1_edited.PNG"
+            alt="University of Tennessee Baptist Collegiate Ministry logo"
+          />
+        </a>
+      </div>
+      <!-- hamburger -->
+      <div id="page-links-hamburger">
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
+        <div class="hamburger-sec"></div>
+      </div>
+    </div>
     <!-- Webpage Links -->
-    <div class="page-links sticking">
+    <div class="page-links hide sticking">
       <div class="link--text">
         <a href="index.html">Home</a>
+      </div>
+      <div class="link--text">
+        <a href="get_connected.html">Get Connected</a>
       </div>
       <div class="button">
         <span>About <i class="arrow-down"></i></span>
@@ -109,9 +158,6 @@
           </a>
         </div>
       </div>
-      <div class="link--text">
-        <a href="get_connected.html">Get Connected</a>
-      </div>
       <!-- <div class="button">
         <span>Student Media <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
@@ -126,6 +172,7 @@
           <a href="graduate_opportunities.html" class="link--text"
             >Graduate Opportunities</a
           >
+          <a href="get_in_touch.html" class="link--text">Get in Touch</a>
         </div>
       </div>
       <div class="link--text">
@@ -417,8 +464,17 @@
                 1811 Melrose Avenue Knoxville, TN 379161811 Melrose Avenue
                 Knoxville, TN 37916
               </p>
-              <p class="">865-546-8272 (office) • 865-546-8273 (fax)</p>
-              <p class="">baptist@utk.edu (email)</p>
+              <p class="">
+                <a href="tel:865-546-8272" class="underline"
+                  >865-546-8272 (office)</a
+                >
+                • 865-546-8273 (fax)
+              </p>
+              <p class="underline">
+                <a href="mailto:baptist@utk.edu" target
+                  >baptist@utk.edu (email)</a
+                >
+              </p>
             </div>
             <div class="">
               <p>
