@@ -233,30 +233,25 @@
         justify-content: center;
         gap: 5%;
       }
+      .sec-img{
+        align-items: center;
+        justify-content: center;
+      }
       .sec-img > img {
         border-radius: 5px;
         height: 450px;
         display: block;
       }
-      .overlay-text {
-        display: none;
-        visibility: 1;
-        opacity: 1;
-        padding: 2px;
-        border-radius: 10px;
+      .buttonLink {
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-left: 28%;
       }
-      .sec-img:hover .overlay-text {
-        display: flex;
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-size: 35px;
-        color: white;
-        font-weight: 900;
-        font-family: "Times New Roman", Times, serif;
-        background-color: rgba(255, 255, 255, 0.8);
+      .buttonLink:hover{
+        transition-duration: 500ms;
+        background-color: #f8e5c6;
+        color: #b86014;
       }
       #mission-sec-content{
         justify-content: space-evenly;
@@ -351,6 +346,9 @@
           display: flex;
           height: 300px;
         }
+        .buttonLink{
+          margin-left: 20%;
+        }
         #missions-sec-content{
           align-items: center;
         }
@@ -382,7 +380,7 @@
   </head>
   <body class="container">
     <!-- top section -->
-    <div id="top-section" class="top-section-sticking">
+    <div id="top-section">
       <div id="logo-section">
         <a href="index.html">
           <img
@@ -767,20 +765,20 @@
         <div class="sec-content" id="get-connected">
           <div class="sec-img" id="life-group">
             <img src="./Images/home_page_life_groups.png" />
-            <div class="overlay-text fadeIn slideFast">
-              <a href="./get_connected.html">Learn More</a>
+            <div>
+              <a class="buttonLink" href="./get_connected.html">Learn More</a>
             </div>
           </div>
           <div class="sec-img" id="tnt">
             <img src="./Images/home_page_tnt.png" />
-            <div class="overlay-text fadeIn slideFast">
-              <a href="./get_connected.html">Learn More</a>
+            <div>
+              <a class="buttonLink" href="./get_connected.html">Learn More</a>
             </div>
           </div>
           <div class="sec-img" id="soul-food">
             <img src="./Images/home_page_soul_food.png" />
-            <div class="overlay-text fadeIn slideFast">
-              <a href="get_connected.html">Learn More</a>
+            <div>
+              <a class="buttonLink" href="get_connected.html">Learn More</a>
             </div>
           </div>
         </div>

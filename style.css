@@ -194,6 +194,20 @@ a {
 .dropdown-content > a {
   color: #f8e5c6;
 }
+.buttonLink {
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #b86014;
+  padding: 10px;
+  font-size: 30px;
+  color: #f8e5c6;
+}
+.buttonLink:hover {
+  transition-duration: 500ms;
+  background-color: #f8e5c6;
+  color: #b86014;
+}
 
 .paragraph {
   font-family: sans-serif;
@@ -216,6 +230,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     background-color: #f8e5c6;
+    /* box-shadow: 1px 1px 20px black; */
   }
   body #logo-section {
     height: 100%;
