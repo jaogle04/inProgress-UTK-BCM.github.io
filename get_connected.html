@@ -75,21 +75,6 @@
       #TNT-image {
         box-shadow: 0rem 0.3rem 0.5rem black;
       }
-      #google-form {
-        display: inline-block;
-        border-radius: 10px;
-        text-align: center;
-        /* width: 250px; */
-        background-color: #b86014;
-        padding: 10px;
-        font-size: 30px;
-        color: #f8e5c6;
-      }
-      #google-form:hover {
-        transition-duration: 500ms;
-        background-color: #f8e5c6;
-        color: #b86014;
-      }
       .map {
         display: flex;
         flex-direction: column;
@@ -98,6 +83,10 @@
         margin-bottom: 25px;
       }
       @media screen and (max-width: 400px){
+        .header{
+          background-image: none;
+          background-color:#b86014;
+        }
         .title{
           font-size: 1.8rem;
           overflow-wrap: break-word;
@@ -225,7 +214,7 @@
             <a
               href="https://docs.google.com/forms/d/1QRdEMVwqMAxP9DkKyEO_hUtkkxO29_4C6LpvMHAD290/prefill"
               target="_blank"
-              ><h5 class="button" id="google-form">Get Plugged-In</h5></a
+              ><h5 class="buttonLink">Get Plugged-In</h5></a
             >
           </div>
         </div>
