@@ -35,13 +35,17 @@
     />
     <link />
     <style>
+      #top-section {
+        display: none;
+      }
       #google-form {
-        /* justify-content: center;
-        align-items: center; */
-        text-align: center;
         margin-top: 50px;
+        width: 80%;
       }
       @media screen and (max-width: 400px) {
+        #top-section {
+          display: block;
+        }
         #google-form {
           padding-top: 50px;
           width: 90%;
@@ -50,7 +54,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="body">
     <!-- top  section -->
     <div id="top-section">
       <div id="logo-section">
@@ -116,7 +120,7 @@
       </div>
     </div>
     <!-- google form -->
-    <div>
+    <div class="main-content">
       <iframe
         id="google-form"
         src="https://docs.google.com/forms/d/e/1FAIpQLSejVoOxZovxfOTWvvBEUJiEulSpKbM1t2UQhy_jWIzYpaRzkQ/viewform?embedded=true"
