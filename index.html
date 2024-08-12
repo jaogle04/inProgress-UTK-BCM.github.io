@@ -230,23 +230,29 @@
         font-size: 1rem;
       }
       #get-connected {
+        flex-direction: column;
         justify-content: center;
         gap: 5%;
       }
       .sec-img{
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
       }
       .sec-img > img {
         border-radius: 5px;
         height: 450px;
         display: block;
       }
+      #get-connected-button{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
       .buttonLink {
         font-size: 30px;
         font-weight: 700;
-        margin-top: 10px;
-        margin-left: 28%;
       }
       .buttonLink:hover{
         transition-duration: 500ms;
@@ -342,8 +348,11 @@
           align-items: center;
           gap: 20px;
         }
-        .sec-img>img{
-          display: flex;
+        .sec-img{
+          flex-direction: column;
+          gap: 20px;
+        }
+        .sec-img > img{
           height: 300px;
         }
         .buttonLink{
@@ -763,21 +772,12 @@
           <h2>Get Connected</h2>
         </div>
         <div class="sec-content" id="get-connected">
-          <div class="sec-img" id="life-group">
+          <div class="sec-img">
             <img src="./Images/home_page_life_groups.png" />
-            <div>
-              <a class="buttonLink" href="./get_connected.html">Learn More</a>
-            </div>
-          </div>
-          <div class="sec-img" id="tnt">
             <img src="./Images/home_page_tnt.png" />
-            <div>
-              <a class="buttonLink" href="./get_connected.html">Learn More</a>
-            </div>
-          </div>
-          <div class="sec-img" id="soul-food">
             <img src="./Images/home_page_soul_food.png" />
-            <div>
+          </div>
+            <div id="get-connected-button">
               <a class="buttonLink" href="get_connected.html">Learn More</a>
             </div>
           </div>
