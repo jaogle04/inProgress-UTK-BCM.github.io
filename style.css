@@ -1,4 +1,8 @@
 /* Utility Classes */
+:root {
+  --orange: #b86014;
+  /* --font-robota: font-family */
+}
 .align-left {
   text-align: left;
 }
@@ -119,7 +123,7 @@ a {
   align-items: center;
   font-size: 1rem;
   font-family: sans-serif;
-  box-shadow: 1px 1px 1px black;
+  /* box-shadow: 1px 1px 1px black; */
   text-transform: uppercase;
 }
 .sticking {
@@ -220,7 +224,7 @@ a {
   }
 }
 /* Phone Width */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   #top-section {
     width: 100%;
     height: auto;

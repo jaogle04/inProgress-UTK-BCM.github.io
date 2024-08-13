@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>graduate-opportunities</title>
+    <title>contact-us</title>
     <link href="./animate.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <!-- Jost font -->
@@ -33,65 +33,26 @@
       href="https://fonts.googleapis.com/css2?family=Allura&family=Archivo+Black&family=Chivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./favicon.ico" />
     <style>
       #top-section {
         display: none;
       }
-      #orange-poster {
-        background-color: #b86014;
-        font-size: 1.2rem;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: 5%;
-        width: 95%;
-        border-radius: 150px 0 0 150px;
-        overflow: hidden;
-      }
-      #op-text {
-        word-spacing: 10px;
-        padding: 10px 10% 10px 10%;
-        text-align: center;
-      }
-      .section {
-        margin: 0 15% 0 15%;
-        word-spacing: 10px;
-        margin-bottom: 50px;
-      }
-      #google-form {
-        /* justify-content: center;
-        align-items: center; */
-        text-align: center;
-        margin-top: 50px;
-      }
-      .bold {
-        font-weight: bolder;
+      .main-content {
+        display: flex;
+        justify-content: center;
       }
       @media screen and (max-width: 480px) {
         #top-section {
           display: block;
         }
-        #orange-poster {
-          width: 100%;
-          border-radius: 0;
-          margin-left: 0;
-          font-size: 1.1rem;
-        }
-        #op-text {
-          text-align: center;
-        }
         .main-content {
-          display: flex;
-          flex-direction: column;
-          gap: 50px;
-        }
-        .section {
-          font-size: 0.8rem;
-          margin: 0 15px 0 15px;
+          padding-top: 100px;
         }
       }
     </style>
   </head>
-  <body>
+  <body class="body">
     <!-- top  section -->
     <div id="top-section">
       <div id="logo-section">
@@ -110,7 +71,7 @@
         <div class="hamburger-sec"></div>
       </div>
     </div>
-    <!-- Webpage links -->
+    <!-- page links -->
     <div class="page-links hide sticking">
       <div class="link-text">
         <a href="index.html">Home</a>
@@ -130,13 +91,13 @@
         </div>
       </div>
       <!-- <div class="button">
-        <span>Student Media <i class="arrow-down"></i></span>
-        <div class="dropdown-pageLinks">
-          <a href="./B_article.html" class="link-text"><p>The B Article</p></a>
-          <a href="" class="link-text"><p>Podcast</p></a>
-          <a href="" class="link-text"><p>Youtube Channel</p></a>
-        </div>
-      </div> -->
+          <span>Student Media <i class="arrow-down"></i></span>
+          <div class="dropdown-pageLinks">
+            <a href="./B_article.html" class="link-text"><p>The B Article</p></a>
+            <a href="" class="link-text"><p>Podcast</p></a>
+            <a href="" class="link-text"><p>Youtube Channel</p></a>
+          </div>
+        </div> -->
       <div class="button">
         <span>Alumni and Friends <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
@@ -150,57 +111,18 @@
         <a href="support.html">Support</a>
       </div>
     </div>
-    <!-- Main Content -->
+    <!-- main content -->
     <div class="main-content">
-      <div id="orange-poster">
-        <div id="op-text" class="slideInRight animate-speed-normal easeOut">
-          <p>
-            Are you looking for an opportunity to grow personally, spiritually,
-            and relationally? Curious to know what daily ministry looks like?
-            Looking for some practical ministry experience before you make a
-            long term ministry decision? If so, the
-            <span class="bold"
-              >University of Tennessee Knoxville BCM Graduate Assistant
-              Position</span
-            >
-            might be for you!
-          </p>
-        </div>
-      </div>
-      <div class="section">
-        <p>
-          This ministry opportunity is designed to provide you the opportunity
-          to learn from and minister alongside seasoned campus ministers. It
-          will expose you to all areas of ministry: building into the lives of
-          students, leading small groups, working with international students,
-          planning ministry events, and more. The UTK BCM has been a thriving
-          ministry since 1937. BCM serves UT through weekly evangelism
-          engagement and the community through our SERVE week. Life group Bible
-          studies are active and consistently growing. Our weekly worship on
-          Thursday nights, TNT, reaches around 125 students. A financial stipend
-          can be discussed after further consultation with the BCM.
-        </p>
-      </div>
-      <div class="section">
-        <p>
-          <span class="bold">Minimum Requirement:</span> Ability to commit ten
-          months, bachelor's degree, and some experince in Baptist Collegiate
-          Ministry. Preferred experince: Time spent serving in missions, local
-          and abroad. Experience teaching Bible studies and leading discipleship
-          groups.
-        </p>
-      </div>
-      <div class="section">
-        <p>
-          <span class="bold">
-            For further questions please contanct Samantha Hawes at
-            <a class="underline" href="mailto:shawes@tnbaptist.org" target
-              >shawes@tnbaptist.org</a
-            >
-            or <a class="underline" href="tel:865-546-8272">(865)546-8272</a>.
-          </span>
-        </p>
-      </div>
+      <iframe
+        id="contact-us-google-form"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfePJUp76FOWIH-ZyT76tJx9spPzfP0FBuGckhg4iKFBDx5mQ/viewform?embedded=true"
+        width="640"
+        height="1470"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe
+      >
     </div>
     <!-- Footer -->
     <div id="footer">
@@ -307,7 +229,7 @@
               id="tbmb-logo"
               style="float: right"
               src="./Images/TBMB_edited.png"
-              alt="Tennessee Baptist Mission Board Logo"
+              alt="Tennessee Baptist Mission Board logo"
             />
           </a>
         </div>

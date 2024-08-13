@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UTK BCM</title>
+    <title>UTK-BCM</title>
     <link href="./animate.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <!-- Jost font -->
@@ -48,7 +48,7 @@
         /* opacity: 0.75; */
       }
       .subtitle {
-        margin-bottom: -150px;
+        margin-bottom: -12%;
         padding: 0;
         font-size: 4.5rem;
         text-align: center;
@@ -103,7 +103,7 @@
         align-items: center;
         gap: 20px;
       }
-      .cal-container {
+      #cal-container {
         align-items: center;
         text-align: center;
         display: inline-block;
@@ -115,7 +115,7 @@
       h4 {
         margin: 0;
       }
-      .calendar {
+      #calendar {
         width: auto;
         height: auto;
         background-color: #b86014;
@@ -269,7 +269,7 @@
         justify-content: center;
         align-items: center;
       }
-      @media screen and (max-width:400px) {
+      @media screen and (max-width:480px) {
         #top-section-sticking {
           background-color: #f8e5c6;
           position: sticky;
@@ -313,8 +313,18 @@
           flex-direction: column;
           margin: 0 15px 15px 15px;
         }
-        .calendar{
-          width: 100%;
+        #month-at-glance-content{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #cal-container{
+          display: flex;
+          align-items: center;
+        }
+        #calendar{
+          width: fit-content;
+          padding: 10px 5px 10px 5px;
         }
         #month{
           font-size: 0.8rem;
@@ -428,23 +438,23 @@
     </div>
     <!-- Webpage links -->
     <div class="page-links hide sticking">
-      <div class="link--text">
+      <div class="link-text">
         <a href="index.html">Home</a>
       </div>
-      <div class="link--text">
+      <div class="link-text">
         <a href="get_connected.html">Get Connected</a>
       </div>
-      <div onclick="" class="button">
-        <span>About <i class="arrow-down"></i></span>
+      <div class="button">
+        <span>Learn More <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
-          <a href="missions_serving.html" class="link--text"
+          <a href="about_us.html" class="link-text">About Us</a>
+          <a href="missions_serving.html" class="link-text"
             >Missions & Serving</a
           >
-          <a href="events.html" class="link--text">Events</a>
+          <a href="events.html" class="link-text">Events</a>
           <a
-            href="https://www.utbaptist.org/contact-us.html"
-            class="link--text"
-            target="_blank"
+            href="contact_us.html"
+            class="link-text"
           >
             Contact Us
           </a>
@@ -453,21 +463,21 @@
       <!-- <div class="button">
         <span>Student Media <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
-          <a href="./B_article.html" class="link--text"><p>The B Article</p></a>
-          <a href="" class="link--text"><p>Podcast</p></a>
-          <a href="" class="link--text"><p>Youtube Channel</p></a>
+          <a href="./B_article.html" class="link-text"><p>The B Article</p></a>
+          <a href="" class="link-text"><p>Podcast</p></a>
+          <a href="" class="link-text"><p>Youtube Channel</p></a>
         </div>
       </div> -->
       <div class="button">
         <span>Alumni and Friends <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
-          <a href="graduate_opportunities.html" class="link--text"
+          <a href="graduate_opportunities.html" class="link-text"
             >Graduate Opportunities</a
           >
-          <a href="get_in_touch.html" class="link--text">Get in Touch</a>
+          <a href="get_in_touch.html" class="link-text">Get in Touch</a>
         </div>
       </div>
-      <div class="link--text">
+      <div class="link-text">
         <a href="support.html">Support</a>
       </div>
     </div>
@@ -479,8 +489,8 @@
           <h2>Month at a Glance</h2>
         </div>
         <div id="month-at-glance-content" class="sec-content">
-          <div class="cal-container">
-            <div class="calendar">
+          <div id="cal-container">
+            <div id="calendar">
               <div id="month">
                 <h4>August 2024</h4>
               </div>
@@ -511,91 +521,91 @@
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div></div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>1</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>2</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>3</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>4</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>5</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>6</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>7</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>8</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>9</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
@@ -609,147 +619,147 @@
                 <div class="cal-day button">
                   <div>11</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>12</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>13</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
-                    <p>Smores<br>9 PM<br>Join us for late-night snack and campfire conversations</p>
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
+                    <p>Smores<br>9 PM<br>Join us for late-night snack and campfire<br>conversations</p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>14</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p>Luau<br>8 PM<br>Break out your best (or worst) Hawaiian shirt</p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>15</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p>Survival<br>4 PM - 6 PM<br></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>16</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p>Ped Popsicle Tours<br>1 PM - 3 PM</p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>17</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>18</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>19</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>20</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>21</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>22</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>23</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>24</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>25</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>26</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>27</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>28</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>29</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>30</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
                 <div class="cal-day button">
                   <div>31</div>
                   <div class="orangeCircle"></div>
-                  <div class="dropdown-content day-info fadeIn slideFast">
+                  <div class="dropdown-content day-info fadeIn animate-speed-fast">
                     <p></p>
                   </div>
                 </div>
@@ -771,9 +781,9 @@
         </div>
         <div class="sec-content" id="get-connected">
           <div class="sec-img">
-            <img src="./Images/home_page_life_groups.png" />
-            <img src="./Images/home_page_tnt.png" />
-            <img src="./Images/home_page_soul_food.png" />
+            <img src="./Images/home_page_life_groups.png" alt="group picture of BCM members right as they are getting ready to do lifegorup" />
+            <img src="./Images/home_page_tnt.png" alt="guest speaker giving the message at TNT (Thursday Night Together)"/>
+            <img src="./Images/home_page_soul_food.png" alt="BCM staff and members serving university students at Soul Food"/>
           </div>
             <div id="get-connected-button">
               <a class="buttonLink" href="get_connected.html">Learn More</a>
@@ -786,8 +796,8 @@
         <div class="sec-title">
           <h2>Missions</h2>
         </div>
-        <div  id="mission-sec-content" class="sec-content">
-          <img src="./Images/mission.jpg" class="image" />
+        <div  id="mission-sec-content" class="sec-content"> <!--change this photo-->
+          <img src="./Images/mission.jpg" class="image" alt="group of BCM students with international missionary partners in Europe"/>
           <p class="paragraph">
             At the BCM, we want to provide students with many opportunities to
             practically live out Matthew 28. We strive to share the gospel on
@@ -947,6 +957,7 @@
               id="tbmb-logo"
               style="float: right"
               src="./Images/TBMB_edited.png"
+              alt="Tennessee Baptist Mission Board logo"
             />
           </a>
         </div>

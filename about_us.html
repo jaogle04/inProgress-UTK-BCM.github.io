@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>graduate-opportunities</title>
+    <title>About Us</title>
     <link href="./animate.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <!-- Jost font -->
@@ -34,59 +34,96 @@
       rel="stylesheet"
     />
     <style>
+      body {
+        font-family: "Robota", sans-serif;
+      }
       #top-section {
         display: none;
       }
-      #orange-poster {
-        background-color: #b86014;
-        font-size: 1.2rem;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: 5%;
-        width: 95%;
-        border-radius: 150px 0 0 150px;
+      .header {
+        flex: row;
+        justify-content: end;
+        height: 60vh;
+        background-image: url(./Images/Fall\ Retreat\ Group\ Photo.jpg);
+        background-size: cover;
+        background-position: center;
         overflow: hidden;
       }
-      #op-text {
-        word-spacing: 10px;
-        padding: 10px 10% 10px 10%;
+      #header-content-background {
+        display: flex;
+        width: 700px;
+        background-color: var(--orange);
+        height: 150%;
+        border-radius: 400px 0 0 400px;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+        box-shadow: -1px 2px 20px black;
+      }
+      #header-content {
+        padding-top: 30px;
+        padding-left: 30px;
+        width: 80%;
+        color: white;
+        text-align: left;
+      }
+      #header-title {
+        font-size: 2.8rem;
+        margin: 0;
+      }
+      #header-description {
+        font-size: 0.8rem;
+      }
+      .main-content {
+        padding-top: 100px;
+      }
+      #staff-images-section {
+        display: flex;
+        flex-direction: row;
+        height: min-content;
+        justify-content: space-around;
+        align-items: start;
+        /* gap: 100px; */
+      }
+      .image-holder {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        justify-content: center;
+        gap: 20px;
+      }
+      .staff-image {
+        border-radius: 10px;
+      }
+      #rodney-image {
+        width: 350px;
+      }
+      #sam-image {
+        height: 450px;
+        width: 300px;
+      }
+      #jennifer-image {
+        width: 400px;
+      }
+      #staff > h2 {
+        margin-top: 0;
         text-align: center;
+        font-size: 2.8rem;
+        text-transform: uppercase;
       }
-      .section {
-        margin: 0 15% 0 15%;
-        word-spacing: 10px;
-        margin-bottom: 50px;
+      .image-text {
+        font-size: 0.8rem;
       }
-      #google-form {
-        /* justify-content: center;
-        align-items: center; */
-        text-align: center;
-        margin-top: 50px;
-      }
-      .bold {
-        font-weight: bolder;
+      .image-text > p {
+        margin: 0;
       }
       @media screen and (max-width: 480px) {
         #top-section {
           display: block;
         }
-        #orange-poster {
-          width: 100%;
-          border-radius: 0;
-          margin-left: 0;
-          font-size: 1.1rem;
-        }
-        #op-text {
-          text-align: center;
-        }
         .main-content {
-          display: flex;
-          flex-direction: column;
-          gap: 50px;
-        }
-        .section {
-          font-size: 0.8rem;
-          margin: 0 15px 0 15px;
+          padding-top: 50px;
         }
       }
     </style>
@@ -110,7 +147,7 @@
         <div class="hamburger-sec"></div>
       </div>
     </div>
-    <!-- Webpage links -->
+    <!-- page links -->
     <div class="page-links hide sticking">
       <div class="link-text">
         <a href="index.html">Home</a>
@@ -130,13 +167,13 @@
         </div>
       </div>
       <!-- <div class="button">
-        <span>Student Media <i class="arrow-down"></i></span>
-        <div class="dropdown-pageLinks">
-          <a href="./B_article.html" class="link-text"><p>The B Article</p></a>
-          <a href="" class="link-text"><p>Podcast</p></a>
-          <a href="" class="link-text"><p>Youtube Channel</p></a>
-        </div>
-      </div> -->
+                  <span>Student Media <i class="arrow-down"></i></span>
+                  <div class="dropdown-pageLinks">
+                    <a href="./B_article.html" class="link-text"><p>The B Article</p></a>
+                    <a href="" class="link-text"><p>Podcast</p></a>
+                    <a href="" class="link-text"><p>Youtube Channel</p></a>
+                  </div>
+                </div> -->
       <div class="button">
         <span>Alumni and Friends <i class="arrow-down"></i></span>
         <div class="dropdown-pageLinks">
@@ -150,59 +187,82 @@
         <a href="support.html">Support</a>
       </div>
     </div>
-    <!-- Main Content -->
-    <div class="main-content">
-      <div id="orange-poster">
-        <div id="op-text" class="slideInRight animate-speed-normal easeOut">
-          <p>
-            Are you looking for an opportunity to grow personally, spiritually,
-            and relationally? Curious to know what daily ministry looks like?
-            Looking for some practical ministry experience before you make a
-            long term ministry decision? If so, the
-            <span class="bold"
-              >University of Tennessee Knoxville BCM Graduate Assistant
-              Position</span
-            >
-            might be for you!
+    <!-- header -->
+    <div class="header">
+      <div id="header-content-background" class="">
+        <div id="header-content" class="">
+          <h1 id="header-title" class="slideUp-150px-fadeIn animate-speed-slow">
+            Who We Are
+          </h1>
+          <p
+            id="header-description"
+            class="slideUp-100px-fadeIn animate-speed-slow"
+          >
+            The UTK BCM is a place to build community as we grow together in
+            Christ. If you need a place to study in between classes or to take a
+            break after a long week, we are here for you. We believe that God
+            has placed you at UT for a purpose and want to walk alongside you on
+            the path that He has called you. Above all, we want to make Christ
+            known throughout our campus. Whether you are a new, transfer, or
+            graduate student, we would love to get to know you and make our big
+            campus a little smaller.
           </p>
         </div>
       </div>
-      <div class="section">
-        <p>
-          This ministry opportunity is designed to provide you the opportunity
-          to learn from and minister alongside seasoned campus ministers. It
-          will expose you to all areas of ministry: building into the lives of
-          students, leading small groups, working with international students,
-          planning ministry events, and more. The UTK BCM has been a thriving
-          ministry since 1937. BCM serves UT through weekly evangelism
-          engagement and the community through our SERVE week. Life group Bible
-          studies are active and consistently growing. Our weekly worship on
-          Thursday nights, TNT, reaches around 125 students. A financial stipend
-          can be discussed after further consultation with the BCM.
-        </p>
-      </div>
-      <div class="section">
-        <p>
-          <span class="bold">Minimum Requirement:</span> Ability to commit ten
-          months, bachelor's degree, and some experince in Baptist Collegiate
-          Ministry. Preferred experince: Time spent serving in missions, local
-          and abroad. Experience teaching Bible studies and leading discipleship
-          groups.
-        </p>
-      </div>
-      <div class="section">
-        <p>
-          <span class="bold">
-            For further questions please contanct Samantha Hawes at
-            <a class="underline" href="mailto:shawes@tnbaptist.org" target
-              >shawes@tnbaptist.org</a
-            >
-            or <a class="underline" href="tel:865-546-8272">(865)546-8272</a>.
-          </span>
-        </p>
+    </div>
+    <!-- main content -->
+    <div class="main-content">
+      <div id="staff" class="section">
+        <h2>Staff</h2>
+        <div id="staff-images-section">
+          <div class="image-holder">
+            <img
+              id="rodney-image"
+              src="./Images/Rodney headshot.jpg"
+              class="staff-image"
+              alt="headshot of campus minister Rodney Norvell"
+            />
+            <div class="image-text">
+              <p>Rodney Norvell</p>
+              <p>Campus Minister</p>
+              <a href="mailto:rnorvell@tnbaptist.org" class="underline"
+                >rnorvell@tnbaptist.org</a
+              >
+            </div>
+          </div>
+          <div class="image-holder">
+            <img
+              id="sam-image"
+              src="./Images/Sam headshot.jpg"
+              class="staff-image"
+              alt="headshot of associate campust minister Sam Hawes"
+            />
+            <div class="image-text">
+              <p>Sam Hawes</p>
+              <p>Associate Campus Minister</p>
+              <a href="mailto:shawes@tnbaptist.org" class="underline"
+                >shawes@tnbaptist.org</a
+              >
+            </div>
+          </div>
+          <div class="image-holder">
+            <img
+              id="jennifer-image"
+              src="./images/Jennifer headshot.jpg"
+              class="staff-image"
+              alt="headshot of administrative assistant Jennifer Roach"
+            />
+            <div class="image-text">
+              <p>Jennifer Roach</p>
+              <p>Administrative Assistant</p>
+              <!-- <br /> -->
+              <!--adds white space below "Administrative Assistant" so they match height of the other two-->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Footer -->
+    <!-- footer -->
     <div id="footer">
       <div id="icons" class="footer-section">
         <div id="row-1" class="row">
@@ -307,7 +367,7 @@
               id="tbmb-logo"
               style="float: right"
               src="./Images/TBMB_edited.png"
-              alt="Tennessee Baptist Mission Board Logo"
+              alt="Tennessee Baptist Mission Board logo"
             />
           </a>
         </div>
