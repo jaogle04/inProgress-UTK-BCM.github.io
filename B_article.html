@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The B Fall 2023</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link href="./animate.css" rel="stylesheet" />
+    <!-- Shadows in the Light font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- Robotto font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Oswald font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.ico">
+    <!--  -->
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .hamburger {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 125px;
+        justify-content: center;
+        gap: 10px;
+        z-index: 100;
+        margin-left: 20px;
+      }
+      .hamburger-sec {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .white-dash {
+        height: 10px;
+        width: 75px;
+        background-color: white;
+        border-radius: 10px;
+        margin: 0;
+      }
+      #BCM-logo {
+        position:fixed;
+        height: 125px;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        margin-top: 10px; 
+        margin-right: 10px;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        background-color: #314528;
+        border-bottom: #2a3a23 50px solid;
+      }
+      .title {
+        font-size: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Shadows in the Light", cursive;
+      }
+      .main-content {
+        display: flexbox;
+        flex-direction: column;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      .section {
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+      }
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 0px;
+      }
+      #editor{
+        margin-bottom: 15px;
+      }
+      h4 {
+        margin-top: 2px;
+      }
+      p {
+        font-size: 25px;
+        margin: 5px;
+      }
+    </style>
+    <!--  -->
+  </head>
+  <!-- Compare Washing Post Article -->
+  <!-- Logo -->
+  <body class="container">
+    <div class="hamburger">
+      <div class="hamburger-sec">
+        <div class="white-dash"></div>
+      </div>
+      <div class="hamburger-sec">
+        <div class="white-dash"></div>
+      </div>
+      <div class="hamburger-sec">
+        <div class="white-dash"></div>
+      </div>
+    </div>
+    <!-- <div>
+      <a href="index.html">
+        <img
+          id="BCM-logo"
+          src="./Images/BCM_logo_2_edited.png"
+          alt="University of Tennessee Baptist Collegiate Ministry logo"
+        />
+      </a>
+    </div> -->
+      <!-- Header -->
+      <div class="header">
+                <div>
+          <a href="index.html">
+            <img
+              id="BCM-logo"
+              src="./Images/BCM_logo_2_edited.png"
+              alt="University of Tennessee Baptist Collegiate Ministry logo"
+            />
+          </a>
+        </div>
+        <div class="title">
+          <h1>Welcome to the B</h1>
+          <h2>Fall of 2023</h2>
+        </div>
+      </div>
+      <div class="main-content">
+        <!-- Who We Are at the B content -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <h3 class="section-title">Who We Are at the B</h3>
+            <h4>It's just another newsletter.... or is it?</h4>
+            <p id="editor">Editor in Chief: Whitney Stricklin</p>
+            <p>
+              Of all the places on campus, UTK's Baptist Collegiate Ministry
+              (BCM) seems to always be full of life and activities. Students
+              come and go throughout the day to study, eat, chat, and sometimes…
+              take a nap. Our little campus house on Melrose Avenue is packed
+              with every kind of person. Any room you walk into, you'll find
+              college students from all walks of life fellowshipping with one
+              another. From Soul Food to spiritual interest surveys, our group
+              is ready to serve this campus any way we can to bring people
+              closer to Jesus. With attendance each Thursday night- our worship
+              session called “TNT” -reaching about 100+ students each week, the
+              opportunities to meet new people and build community continue to
+              rise. What better way to hear about what happens at the BCM than
+              from our very own students? The B was created to bring a more
+              personal touch to our latest news.
+            </p>
+            <p>
+              Releasing once a semester, you will be able to read columns from
+              undergraduates journaling their experiences in life, missions, and
+              a whole lotta Jesus. We want to connect more with our supporters
+              and fellow students; that's why you're receiving this newsletter
+              today .With an inside look at everything this ministry does, we
+              hope you will find this student journal uplifting; because we
+              can't do it without you! Prayer is of utmost importance to us here
+              at the BCM. Prayer gives life to ministry and fuels every step of
+              the Christian walk. In reading these upcoming testimonials from
+              our students, we wish to provide you with specific things to pray
+              for.
+            </p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <!-- Freshman Spotlight content -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <h3 class="section-title">Freshman Spotlight</h3>
+            <p id="editor">Contributor: Braden Bright</p>
+            <p>
+              My experience at the BCM so far has been nothing but awesome. The
+              BCM offers an environment for people to get closer to Christ,
+              while also making life-long friendships. They also offer life
+              groups, which are by far one of the most critical groups a college
+              student could get involved in. I have met some of my closest
+              friends in my life group and my faith has 100% been strengthened
+              because of [it]. Additionally, the BCM holds a worship/service
+              every Thursday night at 7:00 called TNT (Thursday Nights
+              Together). For me, this is a time to clear my thoughts and feel a
+              peace that I cannot feel any other way except through worship. I
+              am looking forward to what the future holds for me being a part of
+              the BCM, and all of the memories I will inevitably make.
+            </p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <!-- Trin's Spin on Fall Retreat -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <h3 class="section-title">Trin's Spin on Fall Retreat</h3>
+            <p id="editor">Contributor: Trinity Sankey</p>
+            <p>
+              Fall Retreat 2023 with the BCM was an eye-opening,
+              perspective-changing experience that I had the privilege of
+              attending. For those who do not know, Fall Retreat is an overnight
+              weekend retreat the BCM takes during the fall semester. It is a
+              chance to take time with God, learn about different topics, and
+              meet others who attend the BCM by doing group bonding. Themed
+              retreats are my favorite and the BCM did not disappoint. The theme
+              for the weekend was all things toxic. Those who were there got to
+              hear about toxic culture, toxic femininity, toxic masculinity,
+              toxic religion, and much more. The weekend allowed for
+              opportunities to learn about the toxicity that consumes the world
+              and have a chance to dissect it with peers. Learning about the
+              different topics within toxicity was a highlight of the weekend,
+              but other parts have stuck with me since the end of the retreat.
+              During the retreat, current students who attend the BCM lead
+              panels and devotions that challenge us to ask questions and dive
+              deeper into other topics such as greed, pride, and social media in
+              our own lives. One topic in particular, pride, was an interesting
+              topic that opened the door to the different stages associated with
+              pride. It was something that I had never considered. Most people
+              try not to be prideful, but the different levels of pride such as
+              self-exaltation, self-promotion, self-justification,
+              self-degradation, self-demotion, and self-condemnation. These
+              various stages of pride challenge the definition people recognize.
+              For example, putting yourself down in an unhealthy way is an
+              example of one of the stages of pride: self-condemnation. Learning
+              about the different levels of pride was an important part of the
+              Fall Retreat for me because no one is perfect; we all fall subject
+              to one thing or another as we go through life.
+            </p>
+            <p>
+              Another part I loved was the toxic femininity talk with all the
+              BCM girls led by Samm Hawes. One takeaway I learned was humility
+              does not mean making yourself small, but instead giving God all
+              the glory in your life. This idea of humility is a perspective
+              change that I took into consideration and had to reflect on my
+              life. The best part of the weekend, despite everything I already
+              mentioned, was having my quiet time in a peaceful, beautiful
+              environment where it was just me and God. Everyone's quiet times
+              can be different, and for me, I like to take a moment and just
+              silently exist in the world God created and listen to life on
+              Earth. This personal moment with God during Fall Retreat provided
+              me with certainty that I am where God needs me to be in life and I
+              am one of His many creations. My moment with God is not to
+              discourage others who might not have similar experiences or
+              moments alone with God but is a reminder that God does love and
+              provide for all of His children in different ways. Every Fall
+              Retreat experience varies from person to person. But for me, I
+              changed my perspectives of how I view certain things and I let God
+              take those burdens. So, if you are considering taking a leap of
+              faith into the unknown, or just deciding if attending a retreat is
+              worth it, I suggest you pray about it and trust God, because a
+              large leap for you can be a small step towards God!
+            </p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <!-- To Lead is to Serve -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <h3 class="section-title">To Lead is to Serve</h3>
+            <br />
+            <p>
+              In November, the BCM was able to participate in our 2nd annual
+              ServeKnox Week! Students had the opportunity to serve at many
+              different locations. We were able to help prepare toys and clothes
+              to send to children in rural Appalachia through Mission of Hope,
+              write notes of encouragement for friends and family, host a time
+              of worship and fellowship at a retirement community, continue to
+              support Montgomery Village and Western Heights children's bible
+              studies, fellowship and pray for staff at various international
+              restaurants around Knoxville, and help run games for Pond Gap
+              Elementary's fall festival. We saw a lot of fruitful conversations
+              take place as well as many physical needs met. It has been so
+              encouraging to see the way that BCM students are passionate about
+              serving one another and their community.
+            </p>
+            <p>
+              So many of the students involved at the BCM are serving in some
+              capacity whether it is leading a life group, teaching ESL, running
+              the tech and lights for TNT, or getting up early to make hot
+              chocolate for Coffee Cart. Our students do a wonderful job
+              following Jesus's example in serving others. When thinking about
+              what it means to serve, I feel that it is always important to
+              reorient ourselves to the gospel and remind ourselves of what the
+              Lord has done for us. Jesus loved us so much that He was willing
+              to face the wrath of God to redeem and reunite our sinful and
+              unrighteous souls with Himself. I believe that as we gaze upon the
+              gospel and what the Lord has done for us, we will have a deep
+              desire to follow and serve the Lord out of love for our great
+              savior. Serving others does not earn us salvation or God's
+              approval, we have that through Jesus Christ alone. Serving others
+              is a natural overflow of the love that we have been shown and a
+              desire to obey the One who saved our lives. In light of this
+              truth, we can respond in obedience to Jesus's call to care for
+              those around us in passages like Mathew 25:35-45. Furthermore, we
+              can persevere in doing good like Galatians 6:9 calls us to do. We
+              love because He first loved us. We serve because we were made new.
+              The God who redeemed us and called us to himself is worthy of all
+              of our praise, our service, and our lives.
+            </p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <!-- Behind the Booth -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <h3 class="section-title">Behind the Booth</h3>
+            <h4>Serving Outside of the Spotlight</h4>
+            <p id="editor">Contributor: Turner Perry</p>
+            <p>
+              At the beginning of this year, I jokingly told our worship team
+              that our scripture verse for the year should be “He looked upon
+              their distress when He heard their cry” (Psalm 106:44). This
+              scripture had always seemed to ring true as we finished out our
+              previous school year and, while comedic, felt like an accurate way
+              of describing life in the booth when gearing up for a new
+              semester. Working in the booth is an interesting collection of
+              paradoxes. You are involved in every aspect of the service, yet
+              doing your job well means you should go completely unnoticed.
+              Humility is quite literally the job description because the goal
+              of everything done in the booth is to lead the body to connect
+              with Christ. We use amps and microphones so that everyone in the
+              body can clearly hear the words both spoken and sung, we use
+              projectors for our lyrics so that the body knows the lyrics to
+              sing, and we use lights to focus our attention so that the room is
+              not a distraction. Each role in the booth exists for a specific
+              purpose, not to glorify ourselves, our band, or guest speakers,
+              but to center the body's focus on God's glory and presence.
+            </p>
+            <p>
+              While we use our jobs in the booth to establish order and
+              familiarity within our worship services, you can never fully
+              mitigate chaos. From mics going out mid-sermon to ProPresenter
+              shutting down three minutes before the song service, there is no
+              way to anticipate what wrinkle may occur from week to week. While
+              you desperately try to account for these factors, you must be
+              flexible and prepared to change course at a moment's notice. It is
+              in these moments that you must remember that God's glory is the
+              number one goal. Personally, if my perspective shifts from our
+              goal to my stresses, I immediately start to limit God's glory to
+              my perception of excellence rather than the glory He always
+              displays and deserves. In Haggai, Israel was rebuilding the temple
+              but struggled with the fact that it would not be as grand as
+              Solomon's temple. However, God made it clear to the people that
+              their obedience and faithfulness was the most beautiful temple
+              they could build to him within their hearts. Later, God proclaimed
+              that he would shake the other nations and provide the very wealth
+              and jewels that the Israelites felt they could not account for.
+              Like the rest of our Christian walk, excellence should not
+              paralyze us, but embolden us in the pursuit of the one who is
+              truly excellent and is imparting his own nature to us. While the
+              booth is a new adventure each week, it also brings the grandest
+              blessings. You get to see every hand that is raised or head that
+              is bowed during the song service, or the way classmates minister
+              to and pray over one another when they have had a tough week. When
+              the music gets quiet, you can hear every voice in the room ringing
+              out in worship and recognition of their Savior. Songs that were
+              tricky during rehearsal come together seamlessly through the
+              Lord's faithfulness and reach the body so personally. Ultimately,
+              the story of the booth is striving to lead the body to meet the
+              Lord, trusting in His faithfulness to fill in the gaps and faults
+              of our humanity.
+            </p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <!-- Waiting for the Greenlight -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2"></div>
+          <div class="col-3"></div>
+        </div>
+        <!-- The Heart of Worship -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2"></div>
+          <div class="col-3"></div>
+        </div>
+        <!-- Who is Jennifer -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2"></div>
+          <div class="col-3"></div>
+        </div>
+        <!-- Intramurals -->
+        <div class="section">
+          <div class="col-1"></div>
+          <div class="col-2"></div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <script>
+      // Dropdown Hamburger
+      document.addEventListener(ToggleEvent)
+    </script>
+  </body>
+</html>
