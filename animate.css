@@ -25,12 +25,12 @@
   transition: transform 0.3s ease;
 }
 /* Webpage Dropdown */
-.buttonHover:hover .dropdown-pageLinks {
+.buttonHover ios-click:hover .dropdown-pageLinks {
   display: flex;
   flex-direction: column;
 }
 
-.buttonHover:hover .arrow-down {
+.buttonHover ios-click:hover .arrow-down {
   rotate: 180deg;
 }
 

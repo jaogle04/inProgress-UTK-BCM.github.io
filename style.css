@@ -215,7 +215,7 @@ a {
 .dropdown-content > a {
   color: #f8e5c6;
 }
-.buttonHoverLink {
+.buttonLink {
   display: inline-block;
   border-radius: 10px;
   text-align: center;
@@ -224,7 +224,7 @@ a {
   font-size: 30px;
   color: #f8e5c6;
 }
-.buttonHoverLink:hover {
+.buttonLink:hover {
   transition-duration: 500ms;
   background-color: #f8e5c6;
   color: #b86014;
