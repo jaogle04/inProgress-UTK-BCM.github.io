@@ -58,16 +58,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // iOS click
 document.addEventListener("DOMContentLoaded", function () {
-  const dropDownPageLinks = document.querySelector(".dropdown-pageLinks");
+  const dropDownPageLinks = document.querySelector(".dropdown-pageLinks"); // Creates a DOM element of ".dropdown-pageLinks"
+  const arrow = document.querySelectorAll(".arrow-down");
   const iosClick = document.querySelector(".ios-click");
 
-  iosClick.addEventListener("click", function (iosClickEvent) {
-    var displayClassPageLinks = window.getComputedStyle(
-      ".dropdown-pageLinks"
-    ).display;
-    return displayClassPageLinks;
+  // code performed once click event is triggered
+  function iosClickEvent() {
+    var displayClassPageLinks =
+      window.getComputedStyle(dropDownPageLinks).display;
+    console.log(dropDownPageLinks);
+
     if (displayClassPageLinks === "none") {
+      console.log("display content"); // checks to make sure  if function is working properly
+      dropDownPageLinks.classList.remove("displayNone");
+      dropDownPageLinks.classList.add("displayFlex");
+      arrow.classList.toggle("rotate180");
     } else {
+      console.log("hide content");
+      dropDownPageLinks.classList.remove("displayFlex");
+      dropDownPageLinks.classList.add("displayNone");
+      arrow.classList.toggle("rotate180");
     }
-  });
+  }
+
+  iosClick.addEventListener("click", iosClickEvent);
 });
