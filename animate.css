@@ -19,22 +19,19 @@
   animation-timing-function: ease-out;
 }
 
-.rotate180 {
-  transform: rotate(180deg);
+.rotate46 {
+  transform: rotate(46deg);
+  -webkit-transform: rotate(46deg);
   transition: transform 0.3s ease;
 }
 /* Webpage Dropdown */
-.button:hover .dropdown-pageLinks {
+.buttonHover:hover .dropdown-pageLinks {
   display: flex;
   flex-direction: column;
 }
 
-.button:hover .arrow-down {
+.buttonHover:hover .arrow-down {
   rotate: 180deg;
-}
-
-.arrow-down {
-  transition-duration: 0.3s;
 }
 
 /* Keyframes */

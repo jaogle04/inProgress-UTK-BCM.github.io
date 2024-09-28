@@ -182,12 +182,17 @@ a {
   width: 250px;
 }
 /* Footer end */
+
+/* WebPage Links */
 .arrow-down {
   border: solid black;
   border-width: 0px 3px 3px 0px;
   display: inline-block;
   padding: 3px;
   margin-bottom: 3px;
+  transition: transform 0.3s ease;
+}
+.rotate-arrow {
   transform: rotate(226deg);
   -webkit-transform: rotate(226deg);
 }
@@ -210,7 +215,7 @@ a {
 .dropdown-content > a {
   color: #f8e5c6;
 }
-.buttonLink {
+.buttonHoverLink {
   display: inline-block;
   border-radius: 10px;
   text-align: center;
@@ -219,11 +224,12 @@ a {
   font-size: 30px;
   color: #f8e5c6;
 }
-.buttonLink:hover {
+.buttonHoverLink:hover {
   transition-duration: 500ms;
   background-color: #f8e5c6;
   color: #b86014;
 }
+/* WebPage Links End*/
 
 .paragraph {
   font-family: sans-serif;

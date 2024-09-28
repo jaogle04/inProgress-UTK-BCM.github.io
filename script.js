@@ -58,28 +58,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // iOS click
 document.addEventListener("DOMContentLoaded", function () {
-  const dropDownPageLinks = document.querySelector(".dropdown-pageLinks"); // Creates a DOM element of ".dropdown-pageLinks"
-  const arrow = document.querySelectorAll(".arrow-down");
-  const iosClick = document.querySelector(".ios-click");
+  // "querySelector" only looks for the first instance so it will not work with multiple instances of that class
+  const iosClick = document.querySelectorAll(".ios-click");
 
-  // code performed once click event is triggered
-  function iosClickEvent() {
-    var displayClassPageLinks =
-      window.getComputedStyle(dropDownPageLinks).display;
-    console.log(dropDownPageLinks);
+  // Creates an array of  all classes with "ios-click" based off of "querySelectorAll"
+  iosClick.forEach((iosClick) => {
+    const dropDownPageLinks = iosClick.querySelector(".dropdown-pageLinks"); // Creates a DOM element for elements with the class ".dropdown-pageLinks"
+    const arrow = iosClick.querySelector(".arrow-down");
 
-    if (displayClassPageLinks === "none") {
-      console.log("display content"); // checks to make sure  if function is working properly
-      dropDownPageLinks.classList.remove("displayNone");
-      dropDownPageLinks.classList.add("displayFlex");
-      arrow.classList.toggle("rotate180");
-    } else {
-      console.log("hide content");
-      dropDownPageLinks.classList.remove("displayFlex");
-      dropDownPageLinks.classList.add("displayNone");
-      arrow.classList.toggle("rotate180");
+    // code performed once click event is triggered
+    function iosClickEvent() {
+      var displayClassPageLinks =
+        window.getComputedStyle(dropDownPageLinks).display;
+
+      if (displayClassPageLinks === "none") {
+        //console.log("display content"); // for debugging
+        dropDownPageLinks.classList.remove("displayNone");
+        dropDownPageLinks.classList.add("displayFlex");
+
+        arrow.classList.remove("rotate-arrow");
+        arrow.classList.add("rotate46");
+      } else {
+        //console.log("hide content"); // for debugging
+        dropDownPageLinks.classList.remove("displayFlex");
+        dropDownPageLinks.classList.add("displayNone");
+
+        arrow.offsetWidth;
+        arrow.classList.remove("rotate46");
+        arrow.classList.add("rotate-arrow");
+      }
     }
-  }
 
-  iosClick.addEventListener("click", iosClickEvent);
+    iosClick.addEventListener("click", iosClickEvent);
+  });
 });
