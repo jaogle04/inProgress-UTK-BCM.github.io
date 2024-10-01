@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Utility CLasses */
 .animate-speed-slow {
   animation-duration: 3s;
@@ -167,3 +168,175 @@
 .link-text {
   transition-duration: 0.2s;
 }
+=======
+/* Utility CLasses */
+.animate-speed-slow {
+  animation-duration: 2s;
+}
+
+.animate-speed-normal {
+  animation-duration: 1.5s;
+}
+
+.animate-speed-fast {
+  animation-duration: 0.8s;
+}
+
+.delay {
+  animation-delay: 0.2s;
+}
+
+.easeOut {
+  animation-timing-function: ease-out;
+}
+
+.rotate46 {
+  transform: rotate(46deg);
+  -webkit-transform: rotate(46deg);
+  transition: transform 0.3s ease;
+}
+/* Webpage Dropdown */
+.buttonHover ios-click:hover .dropdown-pageLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonHover ios-click:hover .arrow-down {
+  rotate: 180deg;
+}
+
+/* Keyframes */
+.slideUp-100px-fadeIn {
+  animation-name: slideUp-100px, fadeIn;
+  animation-iteration-count: 1;
+}
+.slideUp-150px-fadeIn {
+  animation-name: slideUp-150px, fadeIn;
+  animation-iteration-count: 1;
+}
+
+@keyframes slideUp-100px {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.slideUp-100px {
+  animation-name: slideUp-100px;
+}
+@keyframes slideUp-150px {
+  from {
+    transform: translateY(150px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.slideUp-150px {
+  animation-name: slideUp-150px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-650px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(650px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.slideDown {
+  animation-name: slideDown;
+  animation-duration: 3s;
+}
+
+@keyframes scaleCenter {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.scaleCenter {
+  animation-name: scaleCenter;
+}
+
+@keyframes scaleTop {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: auto;
+  }
+}
+
+.scaleTop {
+  animation-name: scaleTop;
+}
+@keyframes expand-x-50-percent {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+.expand-x-50-percent {
+  animation-name: expand-x-50-percent;
+}
+
+/* Links */
+.link-text:hover {
+  opacity: 0.7;
+  color: dimgrey;
+}
+
+.link-text {
+  transition-duration: 0.2s;
+}
+>>>>>>> master
