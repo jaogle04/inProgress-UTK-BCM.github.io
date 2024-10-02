@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function editClasses() {
     buttonType.forEach((buttonType) => {
-      var width = window.innerWidth;
+      var width = document.documentElement.clientWidth;
       if (width > phoneWidth) {
         buttonType.classList.add("buttonHover");
       } else {
