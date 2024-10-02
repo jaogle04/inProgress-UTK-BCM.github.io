@@ -12,6 +12,29 @@ const navObserver = new IntersectionObserver((entries) => {
 
 navObserver.observe(scrollWatcher);
 
+// For some reason this is affecting the sticking class from being toggled/added
+// Check Display Size to Remove/Add Classes
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonType = document.querySelectorAll(".button-type");
+  const phoneWidth = 320;
+
+  function editClasses() {
+    buttonType.forEach((buttonType) => {
+      var width = window.innerWidth;
+      if (width > phoneWidth) {
+        buttonType.classList.add("buttonHover");
+        buttonType.classList.remove("ios-click");
+      } else {
+        buttonType.classList.remove("buttonHover");
+        buttonType.classList.add("ios-click");
+      }
+    });
+  }
+
+  editClasses(); // calls the function
+  window.addEventListener("resize", editClasses); //if window is resized without refreshing page
+});
+
 //Top Section
 // const topSection = document.querySelector("#top-section");
 
