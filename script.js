@@ -12,29 +12,6 @@ const navObserver = new IntersectionObserver((entries) => {
 
 navObserver.observe(scrollWatcher);
 
-// For some reason this is affecting the sticking class from being toggled/added
-// Check Display Size to Remove/Add Classes
-document.addEventListener("DOMContentLoaded", function () {
-  const buttonType = document.querySelectorAll(".button-type");
-  const phoneWidth = 320;
-
-  function editClasses() {
-    buttonType.forEach((buttonType) => {
-      var width = window.innerWidth;
-      if (width > phoneWidth) {
-        buttonType.classList.add("buttonHover");
-        buttonType.classList.remove("ios-click");
-      } else {
-        buttonType.classList.remove("buttonHover");
-        buttonType.classList.add("ios-click");
-      }
-    });
-  }
-
-  editClasses(); // calls the function
-  window.addEventListener("resize", editClasses); //if window is resized without refreshing page
-});
-
 //Top Section
 // const topSection = document.querySelector("#top-section");
 
@@ -82,36 +59,69 @@ document.addEventListener("DOMContentLoaded", function () {
 // iOS click
 document.addEventListener("DOMContentLoaded", function () {
   // "querySelector" only looks for the first instance so it will not work with multiple instances of that class
-  const iosClick = document.querySelectorAll(".ios-click");
+  function attachIosClickEvent() {
+    const iosClick = document.querySelectorAll(".ios-click");
 
-  // Creates an array of  all classes with "ios-click" based off of "querySelectorAll"
-  iosClick.forEach((iosClick) => {
-    const dropDownPageLinks = iosClick.querySelector(".dropdown-pageLinks"); // Creates a DOM element for elements with the class ".dropdown-pageLinks"
-    const arrow = iosClick.querySelector(".arrow-down");
+    // Creates an array of  all classes with "ios-click" based off of "querySelectorAll"
+    iosClick.forEach((iosClick) => {
+      const dropDownPageLinks = iosClick.querySelector(".dropdown-pageLinks"); // Creates a DOM element for elements with the class ".dropdown-pageLinks"
+      const arrow = iosClick.querySelector(".arrow-down");
 
-    // code performed once click event is triggered
-    function iosClickEvent() {
-      var displayClassPageLinks =
-        window.getComputedStyle(dropDownPageLinks).display;
+      // code performed once click event is triggered
+      function iosClickEvent() {
+        var displayClassPageLinks =
+          window.getComputedStyle(dropDownPageLinks).display;
 
-      if (displayClassPageLinks === "none") {
-        //console.log("display content"); // for debugging
-        dropDownPageLinks.classList.remove("displayNone");
-        dropDownPageLinks.classList.add("displayFlex");
+        if (displayClassPageLinks === "none") {
+          //console.log("display content"); // for debugging
+          dropDownPageLinks.classList.remove("displayNone");
+          dropDownPageLinks.classList.add("displayFlex");
 
-        arrow.classList.remove("rotate-arrow");
-        arrow.classList.add("rotate46");
-      } else {
-        //console.log("hide content"); // for debugging
-        dropDownPageLinks.classList.remove("displayFlex");
-        dropDownPageLinks.classList.add("displayNone");
+          arrow.classList.remove("rotate-arrow");
+          arrow.classList.add("rotate46");
+        } else {
+          //console.log("hide content"); // for debugging
+          dropDownPageLinks.classList.remove("displayFlex");
+          dropDownPageLinks.classList.add("displayNone");
 
-        arrow.offsetWidth;
-        arrow.classList.remove("rotate46");
-        arrow.classList.add("rotate-arrow");
+          arrow.offsetWidth;
+          arrow.classList.remove("rotate46");
+          arrow.classList.add("rotate-arrow");
+        }
       }
-    }
+      if (!iosClick.hasListenerattached) {
+        iosClick.addEventListener("click", iosClickEvent);
+        iosClick.addEventListener("touchstart", iosClickEvent); // for mobile devices
+        iosClick.hasListenerattached = true; // prevents multiple listeners
+      }
+    });
+  }
+});
 
-    iosClick.addEventListener("click", iosClickEvent);
-  });
+attachIosClickEvent(); // call this intially to bind the event listeners to keep the form conflicting with each other
+
+// For some reason this is affecting the sticking class from being toggled/added
+// Check Display Size to Remove/Add Classes
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonType = document.querySelectorAll(".button-type");
+  const phoneWidth = 320;
+
+  function editClasses() {
+    buttonType.forEach((buttonType) => {
+      var width = window.innerWidth;
+      if (width > phoneWidth) {
+        buttonType.classList.add("buttonHover");
+        buttonType.classList.remove("ios-click");
+      } else {
+        buttonType.classList.remove("buttonHover");
+        buttonType.classList.add("ios-click");
+      }
+    });
+
+    // Reattach iosClickEvent after dynamically adding the class when window size changes
+    attachIosClickEvent();
+  }
+
+  editClasses(); // calls the function
+  window.addEventListener("resize", editClasses); //if window is resized without refreshing page
 });
