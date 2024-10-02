@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Check Display Size to Remove/Add buttonHover
 document.addEventListener("DOMContentLoaded", function () {
   const buttonType = document.querySelectorAll(".button-type");
-  const phoneWidth = 320;
+  const phoneWidth = 480;
 
   function editClasses() {
     buttonType.forEach((buttonType) => {
