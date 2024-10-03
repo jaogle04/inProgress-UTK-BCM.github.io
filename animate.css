@@ -25,7 +25,7 @@
   transition: transform 0.3s ease;
 }
 /* Webpage Dropdown */
-.buttonHover:hover .dropdown-pageLinks {
+.buttonHover:hover .dropdown {
   display: flex;
   flex-direction: column;
 }
