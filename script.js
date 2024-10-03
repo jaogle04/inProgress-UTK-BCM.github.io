@@ -63,29 +63,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Creates an array of  all classes with "ios-click" based off of "querySelectorAll"
   iosClick.forEach((iosClick) => {
-    const dropDownPageLinks = iosClick.querySelector(".dropdown-pageLinks"); // Creates a DOM element for elements with the class ".dropdown-pageLinks"
-    const arrow = iosClick.querySelector(".arrow-down");
+    const dropDown = iosClick.querySelector(".dropdown"); // Creates a DOM element for elements with the class ".dropdown-pageLinks"
+    var arrow = iosClick.querySelector(".arrow-down");
 
     // code performed once click event is triggered
     function iosClickEvent() {
-      var displayClassPageLinks =
-        window.getComputedStyle(dropDownPageLinks).display;
+      var displayClassPageLinks = window.getComputedStyle(dropDown).display;
 
       if (displayClassPageLinks === "none") {
-        //console.log("display content"); // for debugging
-        dropDownPageLinks.classList.remove("displayNone");
-        dropDownPageLinks.classList.add("displayFlex");
-
-        arrow.classList.remove("rotate-arrow");
-        arrow.classList.add("rotate46");
+        console.log("display content"); // for debugging
+        dropDown.classList.remove("displayNone");
+        dropDown.classList.add("displayFlex");
+        if (arrow) {
+          arrow.classList.remove("rotate-arrow");
+          arrow.classList.add("rotate46");
+        }
       } else {
-        //console.log("hide content"); // for debugging
-        dropDownPageLinks.classList.remove("displayFlex");
-        dropDownPageLinks.classList.add("displayNone");
-
-        arrow.offsetWidth;
-        arrow.classList.remove("rotate46");
-        arrow.classList.add("rotate-arrow");
+        console.log("hide content"); // for debugging
+        dropDown.classList.remove("displayFlex");
+        dropDown.classList.add("displayNone");
+        if (arrow) {
+          arrow.offsetWidth;
+          arrow.classList.remove("rotate46");
+          arrow.classList.add("rotate-arrow");
+        }
       }
     }
     if (!iosClick.hasListenerattached) {
